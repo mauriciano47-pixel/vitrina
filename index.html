@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vitrina de Aplicaciones & Hub de Inversores — Mauricio Uribe</title>
+  <meta name="description" content="Ecosistema de aplicaciones web, móviles y PWA de alto impacto: CAMBIOYA!, TrámiteFácil, Faro, VitroDiag y Ataraxia. Pruébalas en vivo, descárgalas o apoya como inversor." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Header / Barra de Navegación -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="#" class="nav-logo">
+        <span class="logo-icon">⚡</span>
+        <span class="logo-text">MAURICIO URIBE <span class="logo-accent">| ECOSYSTEM</span></span>
+      </a>
+      <nav class="nav-links">
+        <a href="#apps">Aplicaciones</a>
+        <a href="#inversores" class="link-highlight">Inversores & Pitch</a>
+        <a href="#apoyo" class="btn btn-sm btn-outline" onclick="abrirModalDonacion('general')">☕ Apoyar / Donar</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-glow"></div>
+    <div class="container hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span> Suite Oficial de Prototipos & Soluciones Reales
+      </div>
+      <h1 class="hero-title">
+        Tecnología con Propósito: <br/>
+        <span class="gradient-text">Del Código al Impacto Real</span>
+      </h1>
+      <p class="hero-subtitle">
+        Plataformas accesibles, herramientas de seguridad ciudadana, diagnóstico clínico y economía colaborativa.
+        <strong>100% funcionales en producción</strong>, listas para probar online, descargar o respaldar como inversor.
+      </p>
+      
+      <!-- Métricas / Tracción en vivo -->
+      <div class="metrics-grid">
+        <div class="metric-card">
+          <span class="metric-num">6+</span>
+          <span class="metric-label">Apps en Producción 24/7</span>
+        </div>
+        <div class="metric-card highlight-metric">
+          <span class="metric-num">51+</span>
+          <span class="metric-label">Usuarios Activos en CAMBIOYA!</span>
+        </div>
+        <div class="metric-card">
+          <span class="metric-num">69</span>
+          <span class="metric-label">Publicaciones de Trueque</span>
+        </div>
+        <div class="metric-card">
+          <span class="metric-num">100%</span>
+          <span class="metric-label">Arquitectura Zero-Warning</span>
+        </div>
+      </div>
+
+      <div class="hero-actions">
+        <a href="#apps" class="btn btn-primary">🚀 Explorar Vitrina de Apps</a>
+        <a href="#inversores" class="btn btn-secondary">💼 Ficha para Inversionistas</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Barra de Filtros de Apps -->
+  <section class="filter-section" id="apps">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Vitrina de Aplicaciones</h2>
+        <p class="section-desc">Selecciona una categoría o pulsa para probar en vivo y descargar cada herramienta.</p>
+      </div>
+
+      <div class="filter-pills">
+        <button class="pill active" data-filter="all">Todas</button>
+        <button class="pill" data-filter="flagship">⭐ Buque Insignia</button>
+        <button class="pill" data-filter="accesibilidad">🗂️ Accesibilidad & IA</button>
+        <button class="pill" data-filter="seguridad">🚨 Seguridad</button>
+        <button class="pill" data-filter="salud">🔬 Salud & Bienestar</button>
+        <button class="pill" data-filter="hardware">🔊 Utilidades</button>
+      </div>
+
+      <!-- Grid de Aplicaciones -->
+      <div class="apps-grid">
+        
+        <!-- 1. CAMBIOYA! (Flagship) -->
+        <article class="app-card flagship-card" data-category="flagship">
+          <div class="card-glow"></div>
+          <div class="card-badge gold">👑 PROYECTO PRINCIPAL & ARMA SECRETA</div>
+          <div class="card-header">
+            <div class="app-icon-box gold-box">🔄</div>
+            <div>
+              <h3 class="app-title">CAMBIOYA!</h3>
+              <span class="app-category">Marketplace de Trueque Colaborativo</span>
+            </div>
+          </div>
+          <p class="app-desc">
+            Revolución en la economía circular: plataforma inteligente que permite a ciudadanos intercambiar bienes y servicios sin dinero como barrera. Servidor Daphne ASGI en Railway con mapas OpenStreetMap, motor de emparejamiento y catálogo semántico.
+          </p>
+          <div class="traction-badge">
+            ⚡ Tracción validada: 51 usuarios registrados | 69 artículos | 25 ofertas activas
+          </div>
+          <div class="card-actions">
+            <a href="https://cambioya-production.up.railway.app" target="_blank" rel="noopener" class="btn btn-sm btn-primary">🚀 Abrir en Vivo (Railway)</a>
+            <a href="#inversores" class="btn btn-sm btn-outline">💼 Ficha Inversión</a>
+          </div>
+        </article>
+
+        <!-- 2. TrámiteFácil -->
+        <article class="app-card" data-category="accesibilidad">
+          <div class="card-badge blue">🗂️ ACCESIBILIDAD & IA</div>
+          <div class="card-header">
+            <div class="app-icon-box blue-box">📄</div>
+            <div>
+              <h3 class="app-title">TrámiteFácil</h3>
+              <span class="app-category">Traductor Ciudadano de Burocracia</span>
+            </div>
+          </div>
+          <p class="app-desc">
+            Asistente diseñado para adultos mayores y ciudadanos que traduce notificaciones oficiales, impuestos y contratos legales a palabras sencillas usando IA (Gemini). Incluye lectura en voz alta y modo alto contraste.
+          </p>
+          <div class="feature-tags">
+            <span>IA Gemini</span>
+            <span>Síntesis de Voz</span>
+            <span>PWA Offline</span>
+            <span>Cero Almacenamiento</span>
+          </div>
+          <div class="card-actions">
+            <a href="https://mauriciano47-pixel.github.io/tramite-facil/" target="_blank" rel="noopener" class="btn btn-sm btn-primary">🚀 Probar Online</a>
+            <a href="https://github.com/mauriciano47-pixel/tramite-facil/releases/download/v1.0.0/TramiteFacil_Web_App.zip" class="btn btn-sm btn-secondary">📥 Descargar ZIP</a>
+            <button class="btn btn-sm btn-outline" onclick="abrirModalDonacion('TrámiteFácil')">☕ Donar / Apoyar</button>
+          </div>
+        </article>
+
+        <!-- 3. Faro -->
+        <article class="app-card" data-category="seguridad">
+          <div class="card-badge red">🚨 SEGURIDAD PERSONAL</div>
+          <div class="card-header">
+            <div class="app-icon-box red-box">🚨</div>
+            <div>
+              <h3 class="app-title">Faro (Tu Seguridad, Tu Luz)</h3>
+              <span class="app-category">Acompañamiento & Alerta SOS</span>
+            </div>
+          </div>
+          <p class="app-desc">
+            Aplicación de emergencia y protección personal con geolocalización de confianza, botón de pánico de 1 toque, destello SOS de alta frecuencia y modo de pantalla nocturna de alta visibilidad.
+          </p>
+          <div class="feature-tags">
+            <span>GPS Tracking</span>
+            <span>Alerta SOS</span>
+            <span>Red de Confianza</span>
+            <span>Visibilidad Nocturna</span>
+          </div>
+          <div class="card-actions">
+            <a href="https://mauriciano47-pixel.github.io/app_faro/" target="_blank" rel="noopener" class="btn btn-sm btn-primary">🚀 Probar Online</a>
+            <a href="https://github.com/mauriciano47-pixel/app_faro/releases/download/v1.0.0/Faro_Seguridad_App.zip" class="btn btn-sm btn-secondary">📥 Descargar ZIP</a>
+            <button class="btn btn-sm btn-outline" onclick="abrirModalDonacion('Faro')">☕ Donar / Apoyar</button>
+          </div>
+        </article>
+
+        <!-- 4. VitroDiag -->
+        <article class="app-card" data-category="salud">
+          <div class="card-badge emerald">🔬 SALUD & DIAGNÓSTICO</div>
+          <div class="card-header">
+            <div class="app-icon-box emerald-box">🧪</div>
+            <div>
+              <h3 class="app-title">VitroDiag & MasterClass</h3>
+              <span class="app-category">Asistencia de Laboratorio In Vitro</span>
+            </div>
+          </div>
+          <p class="app-desc">
+            Herramienta técnica para operadores de laboratorio clínico. Integra catálogo técnico de 104 parámetros, análisis visual asistido y manuales de capacitación para optimizar el diagnóstico in vitro.
+          </p>
+          <div class="feature-tags">
+            <span>Catálogo 104</span>
+            <span>Gemini Vision</span>
+            <span>MasterClass IS</span>
+          </div>
+          <div class="card-actions">
+            <a href="https://mauriciano47-pixel.github.io/vitrodiag/" target="_blank" rel="noopener" class="btn btn-sm btn-primary">🚀 Probar Online</a>
+            <button class="btn btn-sm btn-outline" onclick="abrirModalDonacion('VitroDiag')">💳 Comprar Kit / Apoyar</button>
+          </div>
+        </article>
+
+        <!-- 5. Ataraxia -->
+        <article class="app-card" data-category="salud">
+          <div class="card-badge gold">🌿 SALUD MENTAL</div>
+          <div class="card-header">
+            <div class="app-icon-box gold-box">🧘</div>
+            <div>
+              <h3 class="app-title">Ataraxia</h3>
+              <span class="app-category">Mindfulness & Sonidos Terapéuticos</span>
+            </div>
+          </div>
+          <p class="app-desc">
+            Santuario digital para reducir ansiedad y estrés mediante frecuencias binaurales, ejercicios de respiración adaptativa y diseño visual Imperial Gold OLED anti-fatiga.
+          </p>
+          <div class="feature-tags">
+            <span>Frecuencias Binaurales</span>
+            <span>Respiración Guiada</span>
+            <span>Diseño OLED</span>
+          </div>
+          <div class="card-actions">
+            <a href="https://ataraxia-dce06.web.app" target="_blank" rel="noopener" class="btn btn-sm btn-primary">🚀 Abrir en Firebase</a>
+            <button class="btn btn-sm btn-outline" onclick="abrirModalDonacion('Ataraxia')">☕ Invitar un Café</button>
+          </div>
+        </article>
+
+        <!-- 6. Speaker Remote Pro -->
+        <article class="app-card" data-category="hardware">
+          <div class="card-badge purple">🔊 HARDWARE & PWA</div>
+          <div class="card-header">
+            <div class="app-icon-box purple-box">📻</div>
+            <div>
+              <h3 class="app-title">Speaker Remote Pro</h3>
+              <span class="app-category">Control Maestro de Audio Bluetooth</span>
+            </div>
+          </div>
+          <p class="app-desc">
+            PWA universal para controlar parlantes Bluetooth sin depender de las apps privativas del fabricante. Incluye control master de volumen, interrupción de audio focus y ecualizador DSP.
+          </p>
+          <div class="feature-tags">
+            <span>Web Bluetooth</span>
+            <span>Ecualizador DSP</span>
+            <span>Sin Instalador</span>
+          </div>
+          <div class="card-actions">
+            <a href="https://mauriciano47-pixel.github.io/Speaker_remote/" target="_blank" rel="noopener" class="btn btn-sm btn-primary">🚀 Probar Online</a>
+            <button class="btn btn-sm btn-outline" onclick="abrirModalDonacion('Speaker Remote')">☕ Donar / Apoyar</button>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN INVERSORES & PITCH DECK -->
+  <section class="investor-section" id="inversores">
+    <div class="container">
+      <div class="investor-box">
+        <div class="investor-header">
+          <span class="investor-kicker">OPORTUNIDAD DE INVERSIÓN & ALIANZAS ESTRATÉGICAS</span>
+          <h2 class="investor-title">Ficha Ejecutiva para Inversionistas (Pitch Deck)</h2>
+          <p class="investor-subtitle">
+            Buscamos socios estratégicos, financiamiento ángel y subvenciones públicas de innovación (Grants) para acelerar la expansión comercial de nuestro ecosistema.
+          </p>
+        </div>
+
+        <div class="investor-grid">
+          
+          <div class="investor-card">
+            <div class="inv-icon">🎯</div>
+            <h3>La Tesis y Oportunidad</h3>
+            <p>
+              Desarrollamos soluciones digitales autónomas con costos de infraestructura ultra optimizados ($0 deuda técnica), enfocadas en nichos desatendidos: economía circular sin dinero, adultos mayores frente a la burocracia y seguridad vecinal.
+            </p>
+          </div>
+
+          <div class="investor-card highlight-inv">
+            <div class="inv-icon">👑</div>
+            <h3>Tracción del Flagship: CAMBIOYA!</h3>
+            <p>
+              En tiempos de contracción de liquidez, CAMBIOYA! monetiza el intercambio de bienes usados sin intermediación bancaria.
+              <strong>Métricas iniciales orgánicas:</strong> 51 usuarios, 69 publicaciones activas y 25 propuestas de intercambio coordinadas en producción.
+            </p>
+          </div>
+
+          <div class="investor-card">
+            <div class="inv-icon">📈</div>
+            <h3>Modelos de Monetización</h3>
+            <ul class="inv-list">
+              <li><strong>CAMBIOYA!:</strong> Destacado de publicaciones ($1 USD), verificación de usuarios e intermediación de entregas seguras.</li>
+              <li><strong>TrámiteFácil:</strong> Licenciamiento B2G para municipios y B2B para gestorías administrativas.</li>
+              <li><strong>VitroDiag & Nichos Técnicos:</strong> Venta de licencias Pro y cursos de formación técnica.</li>
+            </ul>
+          </div>
+
+          <div class="investor-card">
+            <div class="inv-icon">💰</div>
+            <h3>Destino de los Fondos</h3>
+            <p>
+              El capital captado se destinará en un <strong>60% a adquisición de usuarios y marketing local</strong>, <strong>25% a infraestructura cloud de alta disponibilidad</strong>, y <strong>15% a formalización jurídica y registro marcario</strong>.
+            </p>
+          </div>
+
+        </div>
+
+        <!-- Contacto Directo para Inversionistas -->
+        <div class="investor-cta-box">
+          <div class="cta-text">
+            <h3>¿Interesado en una reunión de pitch o recibir el whitepaper?</h3>
+            <p>Agenda una conversación directa con el fundador para evaluar términos de inversión o alianzas de distribución.</p>
+          </div>
+          <div class="cta-buttons">
+            <a href="mailto:mauro.uribe.maldonado@gmail.com?subject=Interés%20en%20Inversión%20-%20Ecosistema%20Mauricio%20Uribe&body=Hola%20Mauricio,%20he%20revisado%20tu%20vitrina%20de%20aplicaciones%20y%20me%20gustaría%20conversar%20sobre%20una%20oportunidad%20de%20inversión/alianza." class="btn btn-primary">✉️ Contactar por Email</a>
+            <a href="https://t.me/mauriciano47" target="_blank" rel="noopener" class="btn btn-secondary">✈️ Hablar por Telegram</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <p>© 2026 Mauricio Uribe Maldonado & Antigravity AI — Todos los derechos reservados.</p>
+      <div class="footer-links">
+        <a href="https://github.com/mauriciano47-pixel" target="_blank" rel="noopener">GitHub Oficial</a>
+        <a href="#inversores">Inversionistas</a>
+        <a href="#apps">Aplicaciones</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MODAL DE DONACIÓN / APOYO / COMPRA -->
+  <div class="modal-backdrop" id="modal-donacion" style="display: none;">
+    <div class="modal-card">
+      <button class="modal-close" onclick="cerrarModalDonacion()">✕</button>
+      
+      <div class="modal-header">
+        <span class="modal-kicker">APOYO DIRECTO AL CREADOR</span>
+        <h3 class="modal-title" id="modal-app-title">Apoyar el Desarrollo</h3>
+        <p class="modal-sub">Tu aporte permite mantener los servidores activos y acelerar nuevas versiones libres de publicidad.</p>
+      </div>
+
+      <!-- Pestañas de Pago -->
+      <div class="modal-tabs">
+        <button class="tab-btn active" onclick="cambiarTabPago('nacional')">🇦🇷 Transferencia / Mercado Pago</button>
+        <button class="tab-btn" onclick="cambiarTabPago('internacional')">🌎 PayPal / USD Internacional</button>
+      </div>
+
+      <!-- Tab 1: Argentina / Mercado Pago -->
+      <div class="tab-content active" id="tab-nacional">
+        <div class="payment-box">
+          <p class="payment-instruction">Puedes transferir cualquier monto voluntario mediante Alias o CBU bancario directo:</p>
+          
+          <div class="copy-box">
+            <div class="copy-info">
+              <span class="copy-label">ALIAS MERCADO PAGO / BANCO</span>
+              <strong class="copy-val" id="alias-texto">mauro.uribe.mp</strong>
+            </div>
+            <button class="btn btn-sm btn-outline copy-btn" onclick="copiarAlPortapapeles('mauro.uribe.mp', this)">📋 Copiar Alias</button>
+          </div>
+
+          <div class="copy-box">
+            <div class="copy-info">
+              <span class="copy-label">TITULAR</span>
+              <strong class="copy-val">Mauricio Uribe Maldonado</strong>
+            </div>
+          </div>
+
+          <div class="suggested-amounts">
+            <span class="suggest-label">Aportes sugeridos:</span>
+            <span class="amount-tag">$1.000 ARS</span>
+            <span class="amount-tag">$2.500 ARS</span>
+            <span class="amount-tag">$5.000 ARS</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab 2: PayPal / Internacional -->
+      <div class="tab-content" id="tab-internacional" style="display: none;">
+        <div class="payment-box">
+          <p class="payment-instruction">Para aportes internacionales en dólares (USD) o compras de licencias de software:</p>
+          <div class="paypal-action">
+            <a href="https://paypal.me/mauriciano47" target="_blank" rel="noopener" class="btn btn-primary btn-block">
+              💳 Donar con PayPal ($2 / $5 / $10 USD)
+            </a>
+            <p class="paypal-note">Acepta todas las tarjetas de crédito y débito internacionales de forma 100% segura.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <p>❤️ ¡Muchas gracias por respaldar el software independiente y libre!</p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="toast">Copiado al portapapeles con éxito ✅</div>
+
+  <script src="app.js"></script>
+</body>
+</html>
