@@ -1,0 +1,8 @@
+.env
+.env*.local
+*.pem
+*.key
+serviceAccount*.json
+node_modules/
+dist/
+scratch/

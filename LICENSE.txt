@@ -1,0 +1,3 @@
+Copyright (c) 2026 Mauricio Uribe Maldonado & Antigravity AI. Todos los derechos reservados.
+Queda estrictamente prohibida la copia, clonación, ingeniería inversa, distribución comercial
+o suplantación de este software sin autorización expresa por escrito del titular.
