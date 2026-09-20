@@ -428,24 +428,39 @@
           </div>
 
           <div style="border-top: 1px solid var(--border-subtle); margin: 16px 0 14px 0; padding-top: 14px;">
-            <span class="copy-label" style="font-weight: 700; color: var(--text-secondary); margin-bottom: 8px;">O TRANSFERENCIA BANCARIA DIRECTA (TEF 0% COMISIÓN):</span>
+            <span class="copy-label" style="font-weight: 700; color: var(--text-secondary); margin-bottom: 8px;">TRANSFERENCIA BANCARIA DIRECTA (TEF 0% COMISIÓN):</span>
           </div>
 
-          <div class="copy-box">
-            <div class="copy-info">
-              <span class="copy-label">BANCO / INSTITUCIÓN DESTINO</span>
-              <strong class="copy-val" style="color: var(--text-primary); font-family: inherit; font-size: 0.95rem;">Mercado Pago (Cuenta Vista)</strong>
+          <!-- CuentaRUT BancoEstado (Opción Principal Chile) -->
+          <div style="background: rgba(245, 158, 11, 0.08); border: 1px solid rgba(245, 158, 11, 0.3); border-radius: var(--radius-md); padding: 14px 16px; margin-bottom: 12px;">
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px;">
+              <span style="font-size: 0.85rem; font-weight: 700; color: var(--gold-glow);">🏦 BANCOESTADO — CUENTARUT</span>
+              <span style="font-size: 0.72rem; background: rgba(245, 158, 11, 0.2); color: #f59e0b; padding: 2px 8px; border-radius: 4px; font-weight: 600;">Opción Directa</span>
+            </div>
+            <div style="display: flex; align-items: center; justify-content: space-between; gap: 8px;">
+              <div>
+                <span class="copy-label">N° DE CUENTA (RUT SIN DÍGITO)</span>
+                <strong class="copy-val" style="color: #fff; font-size: 1.1rem;">17903517</strong>
+              </div>
+              <button class="btn btn-sm btn-outline copy-btn" onclick="copiarAlPortapapeles('17903517', this)">📋 Copiar CuentaRUT</button>
             </div>
           </div>
 
-          <div class="copy-box">
-            <div class="copy-info">
-              <span class="copy-label">NÚMERO DE CUENTA VISTA</span>
-              <strong class="copy-val" id="cuenta-texto">1091342022</strong>
+          <!-- Mercado Pago Cuenta Vista -->
+          <div style="background: rgba(56, 189, 248, 0.05); border: 1px solid rgba(56, 189, 248, 0.2); border-radius: var(--radius-md); padding: 14px 16px; margin-bottom: 12px;">
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px;">
+              <span style="font-size: 0.85rem; font-weight: 700; color: var(--cyan-glow);">📱 MERCADO PAGO — CUENTA VISTA</span>
             </div>
-            <button class="btn btn-sm btn-outline copy-btn" onclick="copiarAlPortapapeles('1091342022', this)">📋 Copiar Cuenta</button>
+            <div style="display: flex; align-items: center; justify-content: space-between; gap: 8px;">
+              <div>
+                <span class="copy-label">N° DE CUENTA VISTA</span>
+                <strong class="copy-val" style="color: #fff; font-size: 1.1rem;">1091342022</strong>
+              </div>
+              <button class="btn btn-sm btn-outline copy-btn" onclick="copiarAlPortapapeles('1091342022', this)">📋 Copiar Cuenta</button>
+            </div>
           </div>
 
+          <!-- Datos Generales: RUT, Titular, Email -->
           <div class="copy-box">
             <div class="copy-info">
               <span class="copy-label">RUT TITULAR</span>
@@ -484,10 +499,18 @@
         <div class="payment-box">
           <p class="payment-instruction">Para aportes internacionales en dólares (USD) o compras de licencias de software:</p>
           <div class="paypal-action">
-            <a href="https://paypal.me/mauriciano47" target="_blank" rel="noopener" class="btn btn-primary btn-block">
-              💳 Donar con PayPal ($2 / $5 / $10 USD)
+            <a href="https://www.paypal.com/signin" target="_blank" rel="noopener" class="btn btn-primary btn-block">
+              💳 Enviar con PayPal ($2 / $5 / $10 USD)
             </a>
-            <p class="paypal-note">Acepta todas las tarjetas de crédito y débito internacionales de forma 100% segura.</p>
+            <p class="paypal-note" style="margin-top: 8px;">Acepta todas las tarjetas internacionales de crédito y débito de forma 100% segura.</p>
+          </div>
+
+          <div class="copy-box" style="margin-top: 14px;">
+            <div class="copy-info">
+              <span class="copy-label">CORREO CUENTA PAYPAL ASOCIADA</span>
+              <strong class="copy-val" style="font-size: 0.95rem;">maurouribe602@gmail.com</strong>
+            </div>
+            <button class="btn btn-sm btn-outline copy-btn" onclick="copiarAlPortapapeles('maurouribe602@gmail.com', this)">📋 Copiar Correo</button>
           </div>
         </div>
       </div>
