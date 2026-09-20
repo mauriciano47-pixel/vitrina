@@ -411,8 +411,9 @@
 
       <!-- Pestañas de Pago -->
       <div class="modal-tabs">
-        <button class="tab-btn active" onclick="cambiarTabPago('nacional')">🇨🇱 Mercado Pago / Tarjetas</button>
-        <button class="tab-btn" onclick="cambiarTabPago('internacional')">🌎 PayPal / Internacional</button>
+        <button class="tab-btn active" onclick="cambiarTabPago('nacional')">🇨🇱 Chile (BancoEstado / MP)</button>
+        <button class="tab-btn" onclick="cambiarTabPago('internacional')">🌎 PayPal / USD</button>
+        <button class="tab-btn" onclick="cambiarTabPago('cripto')">🪙 Cripto / Bitcoin</button>
       </div>
 
       <!-- Tab 1: Chile / Mercado Pago -->
@@ -511,6 +512,42 @@
               <strong class="copy-val" style="font-size: 0.95rem;">maurouribe602@gmail.com</strong>
             </div>
             <button class="btn btn-sm btn-outline copy-btn" onclick="copiarAlPortapapeles('maurouribe602@gmail.com', this)">📋 Copiar Correo</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab 3: Criptomonedas / Buda.com Bitcoin -->
+      <div class="tab-content" id="tab-cripto" style="display: none;">
+        <div class="payment-box">
+          <p class="payment-instruction">Aportes descentralizados en criptomonedas procesados de forma segura mediante <strong>Buda.com</strong>:</p>
+          
+          <!-- Bitcoin (BTC) Box -->
+          <div style="background: rgba(245, 158, 11, 0.05); border: 1px solid rgba(245, 158, 11, 0.3); border-radius: var(--radius-md); padding: 16px; margin-bottom: 12px; text-align: center;">
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
+              <span style="font-size: 0.9rem; font-weight: 700; color: #f59e0b; display: flex; align-items: center; gap: 6px;">
+                <span style="font-size: 1.15rem;">₿</span> BITCOIN (BTC) — RED NATIVA
+              </span>
+              <span style="font-size: 0.72rem; background: rgba(245, 158, 11, 0.2); color: #f59e0b; padding: 2px 8px; border-radius: 4px; font-weight: 600;">Buda.com Oficial</span>
+            </div>
+
+            <!-- Código QR generado -->
+            <div style="background: #ffffff; padding: 12px; border-radius: var(--radius-sm); display: inline-block; margin-bottom: 12px; box-shadow: 0 4px 14px rgba(0,0,0,0.45);">
+              <img src="qr_btc_buda.png" alt="Código QR Bitcoin Buda.com" style="width: 170px; height: 170px; display: block;" />
+            </div>
+
+            <p style="font-size: 0.78rem; color: var(--text-muted); margin-bottom: 12px;">Escanea el código QR desde cualquier app o billetera de Bitcoin (Buda, Binance, Trust, etc.)</p>
+
+            <div class="copy-box" style="margin-bottom: 0; background: rgba(11, 15, 25, 0.9); text-align: left;">
+              <div class="copy-info" style="overflow: hidden; text-overflow: ellipsis;">
+                <span class="copy-label">DIRECCIÓN DE ABONO BITCOIN (P2SH)</span>
+                <strong class="copy-val" style="color: #fff; font-size: 0.85rem; word-break: break-all;">3BUcAh2fiA9chXTBFWBQLZ3bEnCghpSp52</strong>
+              </div>
+              <button class="btn btn-sm btn-outline copy-btn" onclick="copiarAlPortapapeles('3BUcAh2fiA9chXTBFWBQLZ3bEnCghpSp52', this)">📋 Copiar Dirección</button>
+            </div>
+          </div>
+
+          <div style="font-size: 0.8rem; color: var(--text-secondary); line-height: 1.4; text-align: center; margin-top: 10px;">
+            ⚡ Liquidación bancaria nacional automática hacia BancoEstado CuentaRUT vía Buda.com.
           </div>
         </div>
       </div>

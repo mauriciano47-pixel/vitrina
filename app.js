@@ -80,23 +80,28 @@ window.addEventListener('keydown', (e) => {
 });
 
 /**
- * Alternar pestañas de pago (Nacional vs Internacional)
+ * Alternar pestañas de pago (Nacional, Internacional y Cripto)
  */
 function cambiarTabPago(tipo) {
   const tabNacional = document.getElementById('tab-nacional');
   const tabInternacional = document.getElementById('tab-internacional');
+  const tabCripto = document.getElementById('tab-cripto');
   const botonesTabs = document.querySelectorAll('.modal-tabs .tab-btn');
+
+  tabNacional.style.display = 'none';
+  tabInternacional.style.display = 'none';
+  if (tabCripto) tabCripto.style.display = 'none';
+  botonesTabs.forEach(btn => btn.classList.remove('active'));
 
   if (tipo === 'nacional') {
     tabNacional.style.display = 'block';
-    tabInternacional.style.display = 'none';
-    botonesTabs[0].classList.add('active');
-    botonesTabs[1].classList.remove('active');
-  } else {
-    tabNacional.style.display = 'none';
+    if (botonesTabs[0]) botonesTabs[0].classList.add('active');
+  } else if (tipo === 'internacional') {
     tabInternacional.style.display = 'block';
-    botonesTabs[0].classList.remove('active');
-    botonesTabs[1].classList.add('active');
+    if (botonesTabs[1]) botonesTabs[1].classList.add('active');
+  } else if (tipo === 'cripto') {
+    if (tabCripto) tabCripto.style.display = 'block';
+    if (botonesTabs[2]) botonesTabs[2].classList.add('active');
   }
 }
 

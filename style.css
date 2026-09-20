@@ -753,8 +753,9 @@ body {
 
 .modal-tabs {
   display: flex;
+  flex-wrap: wrap;
   gap: 8px;
-  margin-bottom: 24px;
+  margin-bottom: 20px;
   border-bottom: 1px solid var(--border-subtle);
   padding-bottom: 12px;
 }
