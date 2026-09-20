@@ -411,35 +411,43 @@
 
       <!-- Pestañas de Pago -->
       <div class="modal-tabs">
-        <button class="tab-btn active" onclick="cambiarTabPago('nacional')">🇦🇷 Transferencia / Mercado Pago</button>
-        <button class="tab-btn" onclick="cambiarTabPago('internacional')">🌎 PayPal / USD Internacional</button>
+        <button class="tab-btn active" onclick="cambiarTabPago('nacional')">🇨🇱 Mercado Pago / Tarjetas</button>
+        <button class="tab-btn" onclick="cambiarTabPago('internacional')">🌎 PayPal / Internacional</button>
       </div>
 
-      <!-- Tab 1: Argentina / Mercado Pago -->
+      <!-- Tab 1: Chile / Mercado Pago -->
       <div class="tab-content active" id="tab-nacional">
         <div class="payment-box">
-          <p class="payment-instruction">Puedes transferir cualquier monto voluntario mediante Alias o CBU bancario directo:</p>
+          <p class="payment-instruction">Puedes aportar con tarjeta de débito, crédito, Redcompra o tu saldo de Mercado Pago:</p>
           
-          <div class="copy-box">
-            <div class="copy-info">
-              <span class="copy-label">ALIAS MERCADO PAGO / BANCO</span>
-              <strong class="copy-val" id="alias-texto">mauro.uribe.mp</strong>
-            </div>
-            <button class="btn btn-sm btn-outline copy-btn" onclick="copiarAlPortapapeles('mauro.uribe.mp', this)">📋 Copiar Alias</button>
+          <div class="paypal-action" style="margin-bottom: 16px;">
+            <a href="https://link.mercadopago.cl/mauro0202" target="_blank" rel="noopener" class="btn btn-primary btn-block" style="background: linear-gradient(135deg, #009ee3 0%, #007eb5 100%); border-color: #009ee3; font-size: 1.05rem; padding: 14px 20px; display: flex; align-items: center; justify-content: center; gap: 10px;">
+              <span style="font-size: 1.3rem;">💳</span> Donar con Mercado Pago (Link Oficial)
+            </a>
+            <p class="paypal-note" style="margin-top: 8px;">Acepta Webpay, Redcompra, Visa, Mastercard y saldo Mercado Pago de forma 100% segura y directa.</p>
           </div>
 
           <div class="copy-box">
             <div class="copy-info">
-              <span class="copy-label">TITULAR</span>
-              <strong class="copy-val">Mauricio Uribe Maldonado</strong>
+              <span class="copy-label">LINK DIRECTO DE COBRO</span>
+              <strong class="copy-val" id="alias-texto" style="font-size: 0.95rem;">link.mercadopago.cl/mauro0202</strong>
+            </div>
+            <button class="btn btn-sm btn-outline copy-btn" onclick="copiarAlPortapapeles('https://link.mercadopago.cl/mauro0202', this)">📋 Copiar Link</button>
+          </div>
+
+          <div class="copy-box">
+            <div class="copy-info">
+              <span class="copy-label">TITULAR BENEFICIARIO</span>
+              <strong class="copy-val" style="color: var(--text-primary); font-family: inherit; font-size: 0.95rem;">Mauricio Uribe Maldonado</strong>
             </div>
           </div>
 
           <div class="suggested-amounts">
             <span class="suggest-label">Aportes sugeridos:</span>
-            <span class="amount-tag">$1.000 ARS</span>
-            <span class="amount-tag">$2.500 ARS</span>
-            <span class="amount-tag">$5.000 ARS</span>
+            <span class="amount-tag">$1.000 CLP</span>
+            <span class="amount-tag">$3.000 CLP</span>
+            <span class="amount-tag">$5.000 CLP</span>
+            <span class="amount-tag">$10.000 CLP</span>
           </div>
         </div>
       </div>

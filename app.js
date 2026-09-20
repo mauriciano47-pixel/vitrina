@@ -106,7 +106,7 @@ function cambiarTabPago(tipo) {
 function copiarAlPortapapeles(texto, botonElemento) {
   if (navigator.clipboard && window.isSecureContext) {
     navigator.clipboard.writeText(texto).then(() => {
-      mostrarToast('¡Alias copiado al portapapeles! ✅');
+      mostrarToast('¡Copiado al portapapeles con éxito! ✅');
       animarBoton(botonElemento);
     }).catch(() => fallbackCopiar(texto, botonElemento));
   } else {
@@ -124,7 +124,7 @@ function fallbackCopiar(texto, botonElemento) {
   textarea.select();
   try {
     document.execCommand('copy');
-    mostrarToast('¡Alias copiado con éxito! ✅');
+    mostrarToast('¡Copiado al portapapeles con éxito! ✅');
     animarBoton(botonElemento);
   } catch (err) {
     mostrarToast('No se pudo copiar automáticamente. Copia manual: ' + texto);
