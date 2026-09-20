@@ -418,28 +418,55 @@
       <!-- Tab 1: Chile / Mercado Pago -->
       <div class="tab-content active" id="tab-nacional">
         <div class="payment-box">
-          <p class="payment-instruction">Puedes aportar con tarjeta de débito, crédito, Redcompra o tu saldo de Mercado Pago:</p>
+          <p class="payment-instruction">Puedes aportar con tarjeta de débito, crédito, Webpay o transferir directamente desde tu banco:</p>
           
           <div class="paypal-action" style="margin-bottom: 16px;">
             <a href="https://link.mercadopago.cl/mauro0202" target="_blank" rel="noopener" class="btn btn-primary btn-block" style="background: linear-gradient(135deg, #009ee3 0%, #007eb5 100%); border-color: #009ee3; font-size: 1.05rem; padding: 14px 20px; display: flex; align-items: center; justify-content: center; gap: 10px;">
-              <span style="font-size: 1.3rem;">💳</span> Donar con Mercado Pago (Link Oficial)
+              <span style="font-size: 1.3rem;">💳</span> Pagar / Donar con Mercado Pago (1-Tap)
             </a>
-            <p class="paypal-note" style="margin-top: 8px;">Acepta Webpay, Redcompra, Visa, Mastercard y saldo Mercado Pago de forma 100% segura y directa.</p>
+            <p class="paypal-note" style="margin-top: 8px;">Acepta Webpay, Redcompra, Visa, Mastercard y saldo de Mercado Pago en línea.</p>
+          </div>
+
+          <div style="border-top: 1px solid var(--border-subtle); margin: 16px 0 14px 0; padding-top: 14px;">
+            <span class="copy-label" style="font-weight: 700; color: var(--text-secondary); margin-bottom: 8px;">O TRANSFERENCIA BANCARIA DIRECTA (TEF 0% COMISIÓN):</span>
           </div>
 
           <div class="copy-box">
             <div class="copy-info">
-              <span class="copy-label">LINK DIRECTO DE COBRO</span>
-              <strong class="copy-val" id="alias-texto" style="font-size: 0.95rem;">link.mercadopago.cl/mauro0202</strong>
+              <span class="copy-label">BANCO / INSTITUCIÓN DESTINO</span>
+              <strong class="copy-val" style="color: var(--text-primary); font-family: inherit; font-size: 0.95rem;">Mercado Pago (Cuenta Vista)</strong>
             </div>
-            <button class="btn btn-sm btn-outline copy-btn" onclick="copiarAlPortapapeles('https://link.mercadopago.cl/mauro0202', this)">📋 Copiar Link</button>
           </div>
 
           <div class="copy-box">
             <div class="copy-info">
-              <span class="copy-label">TITULAR BENEFICIARIO</span>
-              <strong class="copy-val" style="color: var(--text-primary); font-family: inherit; font-size: 0.95rem;">Mauricio Uribe Maldonado</strong>
+              <span class="copy-label">NÚMERO DE CUENTA VISTA</span>
+              <strong class="copy-val" id="cuenta-texto">1091342022</strong>
             </div>
+            <button class="btn btn-sm btn-outline copy-btn" onclick="copiarAlPortapapeles('1091342022', this)">📋 Copiar Cuenta</button>
+          </div>
+
+          <div class="copy-box">
+            <div class="copy-info">
+              <span class="copy-label">RUT TITULAR</span>
+              <strong class="copy-val" id="rut-texto">17.903.517-0</strong>
+            </div>
+            <button class="btn btn-sm btn-outline copy-btn" onclick="copiarAlPortapapeles('17.903.517-0', this)">📋 Copiar RUT</button>
+          </div>
+
+          <div class="copy-box">
+            <div class="copy-info">
+              <span class="copy-label">NOMBRE DEL TITULAR</span>
+              <strong class="copy-val" style="color: var(--text-primary); font-family: inherit; font-size: 0.95rem;">Mauricio Jordán Uribe Maldonado</strong>
+            </div>
+          </div>
+
+          <div class="copy-box">
+            <div class="copy-info">
+              <span class="copy-label">EMAIL DE NOTIFICACIÓN</span>
+              <strong class="copy-val" style="font-size: 0.9rem;">mauro.uribe.maldonado@gmail.com</strong>
+            </div>
+            <button class="btn btn-sm btn-outline copy-btn" onclick="copiarAlPortapapeles('mauro.uribe.maldonado@gmail.com', this)">📋 Copiar Email</button>
           </div>
 
           <div class="suggested-amounts">
