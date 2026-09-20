@@ -106,6 +106,44 @@ function cambiarTabPago(tipo) {
 }
 
 /**
+ * Alternar sub-moneda Cripto (BTC vs ETH)
+ */
+function cambiarSubCripto(sub) {
+  const boxBtc = document.getElementById('sub-box-btc');
+  const boxEth = document.getElementById('sub-box-eth');
+  const btnBtc = document.getElementById('btn-sub-btc');
+  const btnEth = document.getElementById('btn-sub-eth');
+
+  if (sub === 'btc') {
+    if (boxBtc) boxBtc.style.display = 'block';
+    if (boxEth) boxEth.style.display = 'none';
+    if (btnBtc) {
+      btnBtc.style.background = 'rgba(245, 158, 11, 0.2)';
+      btnBtc.style.color = '#f59e0b';
+      btnBtc.style.borderColor = 'rgba(245, 158, 11, 0.4)';
+    }
+    if (btnEth) {
+      btnEth.style.background = 'transparent';
+      btnEth.style.color = 'var(--text-secondary)';
+      btnEth.style.borderColor = 'var(--border-subtle)';
+    }
+  } else {
+    if (boxBtc) boxBtc.style.display = 'none';
+    if (boxEth) boxEth.style.display = 'block';
+    if (btnBtc) {
+      btnBtc.style.background = 'transparent';
+      btnBtc.style.color = 'var(--text-secondary)';
+      btnBtc.style.borderColor = 'var(--border-subtle)';
+    }
+    if (btnEth) {
+      btnEth.style.background = 'rgba(99, 102, 241, 0.2)';
+      btnEth.style.color = '#818cf8';
+      btnEth.style.borderColor = 'rgba(99, 102, 241, 0.4)';
+    }
+  }
+}
+
+/**
  * Copiar texto al portapapeles con Toast de confirmación
  */
 function copiarAlPortapapeles(texto, botonElemento) {

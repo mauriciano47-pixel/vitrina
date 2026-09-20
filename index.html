@@ -516,13 +516,23 @@
         </div>
       </div>
 
-      <!-- Tab 3: Criptomonedas / Buda.com Bitcoin -->
+      <!-- Tab 3: Criptomonedas / Buda.com (Bitcoin & Ether) -->
       <div class="tab-content" id="tab-cripto" style="display: none;">
         <div class="payment-box">
           <p class="payment-instruction">Aportes descentralizados en criptomonedas procesados de forma segura mediante <strong>Buda.com</strong>:</p>
           
+          <!-- Sub-selector Cripto (BTC vs ETH) -->
+          <div style="display: flex; gap: 8px; justify-content: center; margin-bottom: 14px;">
+            <button type="button" class="btn btn-sm" id="btn-sub-btc" onclick="cambiarSubCripto('btc')" style="border-radius: 20px; padding: 6px 16px; font-weight: 700; background: rgba(245, 158, 11, 0.2); color: #f59e0b; border: 1px solid rgba(245, 158, 11, 0.4); cursor: pointer;">
+              ₿ Bitcoin (BTC)
+            </button>
+            <button type="button" class="btn btn-sm" id="btn-sub-eth" onclick="cambiarSubCripto('eth')" style="border-radius: 20px; padding: 6px 16px; font-weight: 700; background: transparent; color: var(--text-secondary); border: 1px solid var(--border-subtle); cursor: pointer;">
+              ⟠ Ether (ETH)
+            </button>
+          </div>
+
           <!-- Bitcoin (BTC) Box -->
-          <div style="background: rgba(245, 158, 11, 0.05); border: 1px solid rgba(245, 158, 11, 0.3); border-radius: var(--radius-md); padding: 16px; margin-bottom: 12px; text-align: center;">
+          <div id="sub-box-btc" style="background: rgba(245, 158, 11, 0.05); border: 1px solid rgba(245, 158, 11, 0.3); border-radius: var(--radius-md); padding: 16px; margin-bottom: 12px; text-align: center;">
             <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
               <span style="font-size: 0.9rem; font-weight: 700; color: #f59e0b; display: flex; align-items: center; gap: 6px;">
                 <span style="font-size: 1.15rem;">₿</span> BITCOIN (BTC) — RED NATIVA
@@ -530,7 +540,7 @@
               <span style="font-size: 0.72rem; background: rgba(245, 158, 11, 0.2); color: #f59e0b; padding: 2px 8px; border-radius: 4px; font-weight: 600;">Buda.com Oficial</span>
             </div>
 
-            <!-- Código QR generado -->
+            <!-- Código QR generado BTC -->
             <div style="background: #ffffff; padding: 12px; border-radius: var(--radius-sm); display: inline-block; margin-bottom: 12px; box-shadow: 0 4px 14px rgba(0,0,0,0.45);">
               <img src="qr_btc_buda.png" alt="Código QR Bitcoin Buda.com" style="width: 170px; height: 170px; display: block;" />
             </div>
@@ -543,6 +553,31 @@
                 <strong class="copy-val" style="color: #fff; font-size: 0.85rem; word-break: break-all;">3BUcAh2fiA9chXTBFWBQLZ3bEnCghpSp52</strong>
               </div>
               <button class="btn btn-sm btn-outline copy-btn" onclick="copiarAlPortapapeles('3BUcAh2fiA9chXTBFWBQLZ3bEnCghpSp52', this)">📋 Copiar Dirección</button>
+            </div>
+          </div>
+
+          <!-- Ether (ETH) Box -->
+          <div id="sub-box-eth" style="display: none; background: rgba(99, 102, 241, 0.05); border: 1px solid rgba(99, 102, 241, 0.3); border-radius: var(--radius-md); padding: 16px; margin-bottom: 12px; text-align: center;">
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
+              <span style="font-size: 0.9rem; font-weight: 700; color: #818cf8; display: flex; align-items: center; gap: 6px;">
+                <span style="font-size: 1.15rem;">⟠</span> ETHER (ETH) — RED ETHEREUM
+              </span>
+              <span style="font-size: 0.72rem; background: rgba(99, 102, 241, 0.2); color: #818cf8; padding: 2px 8px; border-radius: 4px; font-weight: 600;">Buda.com Oficial</span>
+            </div>
+
+            <!-- Código QR generado ETH -->
+            <div style="background: #ffffff; padding: 12px; border-radius: var(--radius-sm); display: inline-block; margin-bottom: 12px; box-shadow: 0 4px 14px rgba(0,0,0,0.45);">
+              <img src="qr_eth_buda.png" alt="Código QR Ether Buda.com" style="width: 170px; height: 170px; display: block;" />
+            </div>
+
+            <p style="font-size: 0.78rem; color: var(--text-muted); margin-bottom: 12px;">Escanea el código QR desde cualquier billetera Ethereum (Buda, MetaMask, Trust, etc.)</p>
+
+            <div class="copy-box" style="margin-bottom: 0; background: rgba(11, 15, 25, 0.9); text-align: left;">
+              <div class="copy-info" style="overflow: hidden; text-overflow: ellipsis;">
+                <span class="copy-label">DIRECCIÓN DE ABONO ETHER (ERC-20)</span>
+                <strong class="copy-val" style="color: #fff; font-size: 0.82rem; word-break: break-all;">0x8242609c604bcb1944bbf88c52bfa7db8c6f10f2</strong>
+              </div>
+              <button class="btn btn-sm btn-outline copy-btn" onclick="copiarAlPortapapeles('0x8242609c604bcb1944bbf88c52bfa7db8c6f10f2', this)">📋 Copiar Dirección</button>
             </div>
           </div>
 
