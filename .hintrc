@@ -1,0 +1,10 @@
+{
+  "extends": [
+    "development"
+  ],
+  "hints": {
+    "axe/forms": "default",
+    "button-type": "off",
+    "meta-viewport": "default"
+  }
+}

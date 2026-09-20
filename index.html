@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Vitrina de Aplicaciones & Hub de Inversores — Mauricio Uribe</title>
-  <meta name="description" content="Ecosistema de aplicaciones web, móviles y PWA de alto impacto: CAMBIOYA!, TrámiteFácil, Faro, VitroDiag, Ataraxia y HiDoctor. Pruébalas en vivo, descárgalas o apoya como inversor." />
+  <meta name="description" content="Ecosistema de aplicaciones web, móviles y PWA de alto impacto: CAMBIOYA!, TrámiteFácil, Faro, VitroDiag, Ataraxia, HiDoctor y Crypto Pattern Analyzer. Pruébalas en vivo, descárgalas o apoya como inversor." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
@@ -45,7 +45,7 @@
       <!-- Métricas / Tracción en vivo -->
       <div class="metrics-grid">
         <div class="metric-card">
-          <span class="metric-num">7+</span>
+          <span class="metric-num">8+</span>
           <span class="metric-label">Apps en Producción 24/7</span>
         </div>
         <div class="metric-card highlight-metric">
@@ -80,6 +80,7 @@
       <div class="filter-pills">
         <button class="pill active" data-filter="all">Todas</button>
         <button class="pill" data-filter="flagship">⭐ Buque Insignia</button>
+        <button class="pill" data-filter="fintech">📈 FinTech & Trading</button>
         <button class="pill" data-filter="salud">🩺 Salud & Pediatría</button>
         <button class="pill" data-filter="industria">🏭 Industria del Vidrio</button>
         <button class="pill" data-filter="accesibilidad">🗂️ Accesibilidad & IA</button>
@@ -274,6 +275,34 @@
           </div>
         </article>
 
+        <!-- 8. Crypto Pattern Analyzer -->
+        <article class="app-card" data-category="fintech">
+          <div class="card-badge emerald">📈 FINTECH & STREAMING EN TIEMPO REAL</div>
+          <div class="card-header">
+            <div class="app-icon-box emerald-box">📊</div>
+            <div>
+              <h3 class="app-title">Crypto Pattern Analyzer</h3>
+              <span class="app-category">Streaming Binance WebSocket & Detección Algorítmica</span>
+            </div>
+          </div>
+          <p class="app-desc">
+            Terminal de análisis cuantitativo y reconocimiento de patrones técnicos en criptomonedas en tiempo real conectada directamente a los WebSockets de Binance a 60 FPS. Identifica patrones de reversión (Martillo, Envolvente, Doji, Morning Star), calcula osciladores matemáticos (Wilder RSI 14, SMA 20/50, EMA) y evalúa la tasa histórica de acierto (Backtesting) de cada señal al instante, con arquitectura reactiva en el cliente.
+          </p>
+          <div class="feature-tags">
+            <span>Binance WebSocket</span>
+            <span>Tick-by-Tick</span>
+            <span>Backtesting en Vivo</span>
+            <span>RSI Wilder & SMA</span>
+            <span>TradingView Charts</span>
+            <span>Zero-Server Demo</span>
+          </div>
+          <div class="card-actions">
+            <a href="https://crypto-frontend-weld.vercel.app" target="_blank" rel="noopener" class="btn btn-sm btn-primary">🚀 Probar Online</a>
+            <a href="https://github.com/mauriciano47-pixel/crypto-analyzer" target="_blank" rel="noopener" class="btn btn-sm btn-secondary">💻 Ver Código (GitHub)</a>
+            <button class="btn btn-sm btn-outline" onclick="abrirModalDonacion('Crypto Pattern Analyzer')">☕ Donar / Apoyar</button>
+          </div>
+        </article>
+
       </div>
     </div>
   </section>
@@ -317,6 +346,7 @@
               <li><strong>VitroDiag (Industria del Vidrio):</strong> Licenciamiento B2B para plantas de fabricación de envases de vidrio y capacitación técnica especializada para operadores de máquinas I.S.</li>
               <li><strong>Ataraxia (Fitness & Rendimiento Estoico):</strong> Modelo freemium / suscripción a planes de entrenamiento avanzados, macro-nutrición personalizada y arquetipos de coaching interactivo con IA.</li>
               <li><strong>HiDoctor (Salud & Pediatría):</strong> Licenciamiento para aseguradoras de salud y clínicas pediátricas (monitoreo ambulatorio familiar) y suscripción premium con exportación estructurada de historial médico para pediatras.</li>
+              <li><strong>Crypto Pattern Analyzer (FinTech & Trading):</strong> Suscripción SaaS para operadores cuantitativos con alertas WebSocket multiactivo, escáner de patrones en tiempo real y señales con backtesting.</li>
             </ul>
           </div>
 
@@ -361,7 +391,7 @@
   <!-- MODAL DE DONACIÓN / APOYO / COMPRA -->
   <div class="modal-backdrop" id="modal-donacion" style="display: none;">
     <div class="modal-card">
-      <button class="modal-close" onclick="cerrarModalDonacion()">✕</button>
+      <button class="modal-close" onclick="cerrarModalDonacion()" aria-label="Cerrar modal de apoyo">✕</button>
       
       <div class="modal-header">
         <span class="modal-kicker">APOYO DIRECTO AL CREADOR</span>
