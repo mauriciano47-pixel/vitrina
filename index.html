@@ -320,7 +320,7 @@
           <div class="card-badge blue">🛡️ v1.3.1 • GUARDIÁN DE PRIVACIDAD SOBERANA & RGPD ART. 17</div>
           <div class="card-header">
             <div class="app-icon-box logo-img-box blue-border">
-              <img src="logo_sentinel.svg" alt="Logo SENTINEL" class="app-real-logo" />
+              <img src="logo_sentinel.png" alt="Logo SENTINEL" class="app-real-logo" />
             </div>
             <div>
               <h3 class="app-title">SENTINEL — Privacidad Soberana</h3>
@@ -426,6 +426,7 @@
     <div class="container footer-content">
       <p>© 2026 Mauricio Uribe Maldonado & Antigravity AI — Todos los derechos reservados.</p>
       <div class="footer-links">
+        <a href="https://ko-fi.com/mauriuribe" target="_blank" rel="noopener" style="color: #ff5e5b; font-weight: 600;">☕ Ko-fi</a>
         <a href="https://github.com/mauriciano47-pixel" target="_blank" rel="noopener">GitHub Oficial</a>
         <a href="#inversores">Inversionistas</a>
         <a href="#apps">Aplicaciones</a>
@@ -447,7 +448,7 @@
       <!-- Pestañas de Pago -->
       <div class="modal-tabs">
         <button class="tab-btn active" onclick="cambiarTabPago('nacional')">🇨🇱 Chile (BancoEstado / MP)</button>
-        <button class="tab-btn" onclick="cambiarTabPago('internacional')">🌎 PayPal / USD</button>
+        <button class="tab-btn" onclick="cambiarTabPago('internacional')">🌎 Ko-fi / PayPal (USD)</button>
         <button class="tab-btn" onclick="cambiarTabPago('cripto')">🪙 Cripto / Bitcoin</button>
       </div>
 
@@ -530,18 +531,38 @@
         </div>
       </div>
 
-      <!-- Tab 2: PayPal / Internacional -->
+      <!-- Tab 2: Ko-fi / PayPal / Internacional -->
       <div class="tab-content" id="tab-internacional" style="display: none;">
         <div class="payment-box">
           <p class="payment-instruction">Para aportes internacionales en dólares (USD) o compras de licencias de software:</p>
-          <div class="paypal-action">
-            <a href="https://www.paypal.com/signin" target="_blank" rel="noopener" class="btn btn-primary btn-block">
-              💳 Enviar con PayPal ($2 / $5 / $10 USD)
+          
+          <!-- Ko-fi 1-Tap Oficial -->
+          <div class="paypal-action" style="margin-bottom: 14px;">
+            <a href="https://ko-fi.com/mauriuribe" target="_blank" rel="noopener" class="btn btn-primary btn-block" style="background: linear-gradient(135deg, #ff5e5b 0%, #d83a37 100%); border-color: #ff5e5b; font-size: 1.05rem; padding: 14px 20px; display: flex; align-items: center; justify-content: center; gap: 10px; box-shadow: 0 4px 15px rgba(255, 94, 91, 0.35);">
+              <span style="font-size: 1.3rem;">☕</span> Cómprame un café en Ko-fi (Aportes USD)
             </a>
-            <p class="paypal-note" style="margin-top: 8px;">Acepta todas las tarjetas internacionales de crédito y débito de forma 100% segura.</p>
+            <p class="paypal-note" style="margin-top: 8px;">0% comisión de plataforma. Acepta PayPal, tarjetas de crédito y débito internacionales en 1 clic.</p>
           </div>
 
-          <div class="copy-box" style="margin-top: 14px;">
+          <div class="copy-box" style="margin-bottom: 16px;">
+            <div class="copy-info">
+              <span class="copy-label">LINK OFICIAL KO-FI</span>
+              <strong class="copy-val" style="font-size: 0.95rem; color: #fff;">ko-fi.com/mauriuribe</strong>
+            </div>
+            <button class="btn btn-sm btn-outline copy-btn" onclick="copiarAlPortapapeles('https://ko-fi.com/mauriuribe', this)">📋 Copiar Link</button>
+          </div>
+
+          <div style="border-top: 1px solid var(--border-subtle); margin: 16px 0 14px 0; padding-top: 14px;">
+            <span class="copy-label" style="font-weight: 700; color: var(--text-secondary); margin-bottom: 8px;">O DIRECTO VÍA PAYPAL:</span>
+          </div>
+
+          <div class="paypal-action">
+            <a href="https://www.paypal.com/signin" target="_blank" rel="noopener" class="btn btn-secondary btn-block" style="display: flex; align-items: center; justify-content: center; gap: 8px;">
+              <span>💳</span> Enviar con PayPal ($2 / $5 / $10 USD)
+            </a>
+          </div>
+
+          <div class="copy-box" style="margin-top: 12px;">
             <div class="copy-info">
               <span class="copy-label">CORREO CUENTA PAYPAL ASOCIADA</span>
               <strong class="copy-val" style="font-size: 0.95rem;">maurouribe602@gmail.com</strong>
