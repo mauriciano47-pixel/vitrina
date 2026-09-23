@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mauriciano47-pixel.github.io/vitrina/sitemap.xml

@@ -208,3 +208,25 @@ function mostrarToast(mensaje) {
     toast.classList.remove('show');
   }, 3000);
 }
+
+/**
+ * Difusión & Compartir Vitrina (Web Share API nativo con fallback a portapapeles)
+ */
+function compartirVitrina() {
+  const urlVitrina = 'https://mauriciano47-pixel.github.io/vitrina/';
+  const shareData = {
+    title: 'Vitrina de Aplicaciones & Hub de Inversores — Mauricio Uribe',
+    text: 'Explora el ecosistema de aplicaciones de alto impacto: CAMBIOYA!, HiDoctor, Ataraxia, VitroDiag, Faro, SENTINEL y más.',
+    url: urlVitrina
+  };
+
+  if (navigator.share) {
+    navigator.share(shareData).catch((err) => {
+      // Si el usuario cancela o da error, no interrumpir
+    });
+  } else {
+    copiarAlPortapapeles(urlVitrina, null);
+    mostrarToast('¡Enlace oficial de Vitrina copiado al portapapeles! 🚀');
+  }
+}
+

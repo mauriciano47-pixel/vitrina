@@ -784,7 +784,7 @@ body {
 }
 
 .copy-box {
-  background: rgba(255, 255, 255, 0.03);
+  background: rgba(0,0,0,0.4);
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-md);
   padding: 14px 18px;
@@ -792,6 +792,11 @@ body {
   align-items: center;
   justify-content: space-between;
   margin-bottom: 12px;
+}
+
+.tab-btn:focus, .btn:focus, .copy-btn:focus {
+  outline: 2px solid var(--cyan-glow);
+  outline-offset: 2px;
 }
 
 .copy-label {
