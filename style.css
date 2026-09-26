@@ -95,6 +95,20 @@ body {
   filter: drop-shadow(0 0 8px var(--cyan-glow));
 }
 
+.nav-brand-img {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 8px rgba(0, 240, 255, 0.4));
+  transition: transform 0.25s ease, filter 0.25s ease;
+}
+
+.nav-logo:hover .nav-brand-img {
+  transform: scale(1.08) rotate(3deg);
+  filter: drop-shadow(0 0 12px rgba(0, 240, 255, 0.75));
+}
+
 .logo-accent {
   color: var(--cyan-glow);
   font-weight: 400;

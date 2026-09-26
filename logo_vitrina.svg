@@ -1,0 +1,155 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <!-- Fondo Cyber-Obsidian OLED -->
+    <linearGradient id="vitrinaBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#060913"/>
+      <stop offset="50%" stop-color="#090E1D"/>
+      <stop offset="100%" stop-color="#03050A"/>
+    </linearGradient>
+
+    <!-- Borde Tecnológico Neón -->
+    <linearGradient id="borderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00F0FF" stop-opacity="0.8"/>
+      <stop offset="50%" stop-color="#38BDF8" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#10B981" stop-opacity="0.8"/>
+    </linearGradient>
+
+    <!-- Gradiente Vector "V" Ascendente (Launchpad) -->
+    <linearGradient id="launchVectorGrad" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#0284C7"/>
+      <stop offset="30%" stop-color="#00F0FF"/>
+      <stop offset="70%" stop-color="#E0F2FE"/>
+      <stop offset="100%" stop-color="#FFFFFF"/>
+    </linearGradient>
+
+    <!-- Faceta Cristal Cian (Vitrina Techo) -->
+    <linearGradient id="facetCyan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#0284C7" stop-opacity="0.7"/>
+    </linearGradient>
+
+    <!-- Faceta Esmeralda (Impacto Social / Salud / Seguridad) -->
+    <linearGradient id="facetEmerald" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#34D399" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#059669" stop-opacity="0.6"/>
+    </linearGradient>
+
+    <!-- Faceta Oro Imperial (Inversión / Valor / Economía Circular) -->
+    <linearGradient id="facetGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FBBF24" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#D97706" stop-opacity="0.6"/>
+    </linearGradient>
+
+    <!-- Resplandor Neón Intenso -->
+    <filter id="coreGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="12" result="blur1"/>
+      <feGaussianBlur stdDeviation="24" result="blur2"/>
+      <feMerge>
+        <feMergeNode in="blur2"/>
+        <feMergeNode in="blur1"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Resplandor Suave -->
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Contenedor Base Cuadrado con Esquinas Redondeadas -->
+  <rect width="512" height="512" rx="112" fill="url(#vitrinaBg)"/>
+  <rect x="14" y="14" width="484" height="484" rx="98" fill="none" stroke="url(#borderGrad)" stroke-width="2.5"/>
+
+  <!-- Radar / Órbitas Concéntricas de Lanzamiento -->
+  <g stroke="#1E293B" stroke-width="1.5" stroke-dasharray="6 6" fill="none">
+    <circle cx="256" cy="240" r="170" opacity="0.4"/>
+    <circle cx="256" cy="240" r="125" opacity="0.6"/>
+    <circle cx="256" cy="240" r="80" opacity="0.8"/>
+  </g>
+
+  <!-- Rayos de Conexión de Apps Satélite hacia el Núcleo -->
+  <g stroke="#38BDF8" stroke-width="1.5" stroke-opacity="0.4">
+    <line x1="120" y1="140" x2="256" y2="240"/>
+    <line x1="392" y1="140" x2="256" y2="240"/>
+    <line x1="105" y1="310" x2="256" y2="240"/>
+    <line x1="407" y1="310" x2="256" y2="240"/>
+  </g>
+
+  <!-- Nodos Satélite (Representando las Apps del Ecosistema) -->
+  <!-- Nodo 1: HiDoctor / Salud (Esmeralda) -->
+  <g transform="translate(120, 140)" filter="url(#softGlow)">
+    <circle r="16" fill="#0A251D" stroke="#10B981" stroke-width="2.5"/>
+    <circle r="6" fill="#34D399"/>
+  </g>
+
+  <!-- Nodo 2: Ataraxia / Estoicismo (Oro Imperial) -->
+  <g transform="translate(392, 140)" filter="url(#softGlow)">
+    <circle r="16" fill="#2A1B05" stroke="#F59E0B" stroke-width="2.5"/>
+    <circle r="6" fill="#FCD34D"/>
+  </g>
+
+  <!-- Nodo 3: Faro / Seguridad (Cian Eléctrico) -->
+  <g transform="translate(105, 310)" filter="url(#softGlow)">
+    <circle r="16" fill="#062235" stroke="#00F0FF" stroke-width="2.5"/>
+    <circle r="6" fill="#38BDF8"/>
+  </g>
+
+  <!-- Nodo 4: CambioYa / Trueque (Bicolor Cyan & Gold) -->
+  <g transform="translate(407, 310)" filter="url(#softGlow)">
+    <circle r="16" fill="#0B132B" stroke="#38BDF8" stroke-width="2.5"/>
+    <circle r="6" fill="#F59E0B"/>
+  </g>
+
+  <!-- Plataforma Base de la Vitrina / Launchpad Pedestal (Isométrica) -->
+  <g transform="translate(0, 45)">
+    <!-- Base Sombra y Resplandor del Pedestal -->
+    <ellipse cx="256" cy="275" rx="130" ry="38" fill="#00F0FF" fill-opacity="0.12" filter="url(#coreGlow)"/>
+
+    <!-- Anillo Hexagonal Inferior del Pedestal -->
+    <polygon points="256,230 350,265 350,290 256,325 162,290 162,265" fill="#0A1124" stroke="#00F0FF" stroke-width="2" stroke-opacity="0.5"/>
+    <polygon points="256,240 338,272 256,305 174,272" fill="#0F172A" stroke="#38BDF8" stroke-width="1.5"/>
+
+    <!-- Estructura del Prisma de Cristal (Vitrina Hexagonal Facetada) -->
+    <!-- Faceta Izquierda Esmeralda -->
+    <polygon points="256,240 174,272 205,175 256,155" fill="url(#facetEmerald)"/>
+    <!-- Faceta Derecha Oro -->
+    <polygon points="256,240 338,272 307,175 256,155" fill="url(#facetGold)"/>
+    <!-- Techo / Cubierta Superior Cristalina Cyan -->
+    <polygon points="256,155 205,175 256,198 307,175" fill="url(#facetCyan)" opacity="0.95"/>
+  </g>
+
+  <!-- VECTOR CENTRAL ASCENDENTE: LAUNCHPAD "V" DE VITRINA -->
+  <!-- Estela de Propulsión de Energía Vertical -->
+  <g filter="url(#coreGlow)">
+    <path d="M 256 315 L 244 230 L 256 120 L 268 230 Z" fill="#00F0FF" opacity="0.6"/>
+    <line x1="256" y1="330" x2="256" y2="90" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"/>
+  </g>
+
+  <!-- Emblema Geométrico Central: V Ascendente de Alta Precisión -->
+  <g filter="url(#coreGlow)">
+    <!-- Ala Izquierda del Vector "V" -->
+    <polygon points="256,255 190,140 220,130 256,200" fill="url(#launchVectorGrad)"/>
+    <!-- Ala Derecha del Vector "V" -->
+    <polygon points="256,255 322,140 292,130 256,200" fill="url(#launchVectorGrad)"/>
+    <!-- Flecha Central / Núcleo del Cohete de Lanzamiento -->
+    <polygon points="256,85 272,165 256,152 240,165" fill="#FFFFFF"/>
+    <polygon points="256,110 264,160 256,152 248,160" fill="#00F0FF"/>
+  </g>
+
+  <!-- Núcleo de Energía Cuántica en el Centro de la Vitrina -->
+  <g transform="translate(256, 240)" filter="url(#coreGlow)">
+    <circle r="12" fill="#FFFFFF"/>
+    <circle r="6" fill="#00F0FF"/>
+  </g>
+
+  <!-- Insignia Tecnológica Oficial: VITRINA • LAUNCHPAD -->
+  <g transform="translate(141, 428)">
+    <rect x="0" y="0" width="230" height="34" rx="17" fill="#0A1122" stroke="url(#borderGrad)" stroke-width="1.5"/>
+    <circle cx="22" cy="17" r="5" fill="#10B981" filter="url(#softGlow)"/>
+    <text x="38" y="22" font-family="'Space Grotesk', 'Plus Jakarta Sans', sans-serif" font-size="12" font-weight="700" letter-spacing="1.5" fill="#E2E8F0">VITRINA</text>
+    <text x="98" y="22" font-family="'Space Grotesk', sans-serif" font-size="12" font-weight="400" fill="#64748B">•</text>
+    <text x="110" y="22" font-family="'Space Grotesk', 'Plus Jakarta Sans', sans-serif" font-size="12" font-weight="700" letter-spacing="1.5" fill="#00F0FF">LAUNCHPAD</text>
+  </g>
+</svg>

@@ -4,7 +4,12 @@
   "description": "Ecosistema de aplicaciones de alto impacto: CAMBIOYA!, HiDoctor, Ataraxia, VitroDiag, Faro, SENTINEL, TrámiteFácil y Crypto Pattern Analyzer.",
   "icons": [
     {
-      "src": "logo_cambioya.png",
+      "src": "logo_vitrina.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "logo_vitrina.png",
       "sizes": "192x192 512x512",
       "type": "image/png"
     }
