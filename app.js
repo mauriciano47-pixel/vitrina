@@ -64,11 +64,34 @@ function cerrarModalDonacion() {
   document.body.style.overflow = 'auto';
 }
 
+/**
+ * Modal de Venta y Licenciamiento B2B de HiDoctor ($18k USD)
+ */
+function abrirModalVentaHiDoctor() {
+  const modal = document.getElementById('modal-venta-hidoctor');
+  if (modal) {
+    modal.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+  }
+}
+
+function cerrarModalVentaHiDoctor() {
+  const modal = document.getElementById('modal-venta-hidoctor');
+  if (modal) {
+    modal.style.display = 'none';
+    document.body.style.overflow = 'auto';
+  }
+}
+
 // Cerrar al hacer clic en el fondo oscuro
 window.addEventListener('click', (e) => {
-  const modal = document.getElementById('modal-donacion');
-  if (e.target === modal) {
+  const modalDonacion = document.getElementById('modal-donacion');
+  const modalVentaHiDoctor = document.getElementById('modal-venta-hidoctor');
+  if (e.target === modalDonacion) {
     cerrarModalDonacion();
+  }
+  if (e.target === modalVentaHiDoctor) {
+    cerrarModalVentaHiDoctor();
   }
 });
 
@@ -76,6 +99,7 @@ window.addEventListener('click', (e) => {
 window.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') {
     cerrarModalDonacion();
+    cerrarModalVentaHiDoctor();
   }
 });
 

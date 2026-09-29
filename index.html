@@ -423,10 +423,11 @@
             <span>Emergencias 9 Países</span>
             <span>Offline-First</span>
           </div>
-          <div class="card-actions">
+          <div class="card-actions" style="flex-wrap: wrap; gap: 8px;">
             <a href="https://mauriciano47-pixel.github.io/hi-doctor/" target="_blank" rel="noopener" class="btn btn-sm btn-primary">🚀 Probar Online</a>
             <a href="https://mauriciano47-pixel.github.io/hi-doctor/download.html" target="_blank" rel="noopener" class="btn btn-sm btn-secondary">📲 Instalar PWA</a>
-            <button class="btn btn-sm btn-outline" onclick="abrirModalDonacion('HiDoctor')">☕ Donar / Apoyar</button>
+            <button class="btn btn-sm btn-outline" style="border-color: #f59e0b; color: #f59e0b; font-weight: 700; background: rgba(245, 158, 11, 0.08);" onclick="abrirModalVentaHiDoctor()">💼 Adquirir Código / Ficha ($18k USD)</button>
+            <button class="btn btn-sm btn-outline" onclick="abrirModalDonacion('HiDoctor')">☕ Donar</button>
           </div>
         </article>
 
@@ -820,6 +821,116 @@
 
       <div class="modal-footer">
         <p>❤️ ¡Muchas gracias por respaldar el software independiente y libre!</p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- MODAL DE ADQUISICIÓN / VENTA DE CÓDIGO / LICENCIA B2B (HIDOCTOR) -->
+  <div class="modal-backdrop" id="modal-venta-hidoctor" style="display: none;">
+    <div class="modal-card" style="max-width: 680px; max-height: 90vh; overflow-y: auto;">
+      <button class="modal-close" onclick="cerrarModalVentaHiDoctor()" aria-label="Cerrar modal de adquisición">✕</button>
+      
+      <div class="modal-header">
+        <span class="modal-kicker" style="color: #f59e0b;">💼 OPORTUNIDAD DE INVERSIÓN & ACTIVO COMERCIAL HEALTHTECH</span>
+        <h3 class="modal-title" style="display: flex; align-items: center; gap: 10px; margin-top: 6px;">
+          <span>🩺</span> HiDoctor — Adquisición & Licencia B2B
+        </h3>
+        <p class="modal-sub" style="margin-bottom: 16px;">
+          Bitácora pediátrica inteligente y sistema de triaje IA dual (Gemini + Offline-First) desarrollado en React 19 + Vite 8. Código listo para producción (Turnkey) sin costes recurrentes de servidor.
+        </p>
+      </div>
+
+      <!-- Opciones de Adquisición / Pricing Cards -->
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; margin-bottom: 22px;">
+        
+        <!-- Tarjeta 1: Adquisición Total / IP Buyout -->
+        <div style="background: linear-gradient(145deg, rgba(245, 158, 11, 0.08) 0%, rgba(15, 23, 42, 0.9) 100%); border: 2px solid rgba(245, 158, 11, 0.4); border-radius: var(--radius-lg); padding: 20px; position: relative;">
+          <div style="position: absolute; top: -11px; right: 14px; background: #f59e0b; color: #000; font-size: 0.7rem; font-weight: 800; padding: 2px 10px; border-radius: 12px; letter-spacing: 0.5px;">
+            BUYOUT EXCLUSIVO
+          </div>
+          <span style="font-size: 0.8rem; font-weight: 700; color: #f59e0b; text-transform: uppercase;">Propiedad Intelectual 100%</span>
+          <div style="font-size: 2rem; font-weight: 800; color: #fff; margin: 8px 0 4px 0;">
+            $18.000 <span style="font-size: 1rem; color: var(--text-muted); font-weight: 500;">USD</span>
+          </div>
+          <p style="font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 14px; line-height: 1.4;">
+            Cesión total de derechos de código, arquitectura y marca para fondos de capital, startups o cadenas hospitalarias.
+          </p>
+          <ul style="font-size: 0.78rem; color: var(--text-muted); line-height: 1.6; padding-left: 18px; margin-bottom: 16px;">
+            <li><strong style="color: #fff;">Repositorio GitHub Completo</strong>: Código limpio React 19 + Vite 8 + PWA.</li>
+            <li><strong style="color: #fff;">Infraestructura $0/mes</strong>: Jamstack + Gemini AI Free Tier + Fallback.</li>
+            <li><strong style="color: #fff;">SaaS B2C ya cableado</strong>: Modelo de suscripción familiar ($4.99/mes).</li>
+            <li><strong style="color: #fff;">Transferencia Guiada</strong>: 60 días de onboarding técnico directo con el autor.</li>
+          </ul>
+        </div>
+
+        <!-- Tarjeta 2: Licencia B2B Institucional -->
+        <div style="background: linear-gradient(145deg, rgba(56, 189, 248, 0.08) 0%, rgba(15, 23, 42, 0.9) 100%); border: 1px solid rgba(56, 189, 248, 0.35); border-radius: var(--radius-lg); padding: 20px; position: relative;">
+          <div style="position: absolute; top: -11px; right: 14px; background: #38bdf8; color: #000; font-size: 0.7rem; font-weight: 800; padding: 2px 10px; border-radius: 12px; letter-spacing: 0.5px;">
+            MARCA BLANCA
+          </div>
+          <span style="font-size: 0.8rem; font-weight: 700; color: #38bdf8; text-transform: uppercase;">Licencia Clínica B2B</span>
+          <div style="font-size: 2rem; font-weight: 800; color: #fff; margin: 8px 0 4px 0;">
+            $3.500 <span style="font-size: 1rem; color: var(--text-muted); font-weight: 500;">USD</span>
+          </div>
+          <p style="font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 14px; line-height: 1.4;">
+            Instalación corporativa personalizada para centros pediátricos, consultas médicas y aseguradoras de salud.
+          </p>
+          <ul style="font-size: 0.78rem; color: var(--text-muted); line-height: 1.6; padding-left: 18px; margin-bottom: 16px;">
+            <li><strong style="color: #fff;">Modo Clínica White-Label</strong>: Logo y colores de su institución médica.</li>
+            <li><strong style="color: #fff;">Exportación PDF Membretada</strong>: Reportes clínicos firmados con su membrete.</li>
+            <li><strong style="color: #fff;">PWA Multi-dispositivo</strong>: Funciona en tablets de consulta médica y móviles.</li>
+            <li><strong style="color: #fff;">Soporte y Despliegue</strong>: 30 días de asistencia en la configuración.</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Métricas Clave y Retorno de Inversión (ROI) -->
+      <div style="background: rgba(0,0,0,0.4); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 14px 16px; margin-bottom: 20px;">
+        <span style="display: block; font-size: 0.75rem; font-weight: 700; color: var(--text-secondary); margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.5px;">
+          📊 Métricas de Validación Técnica & Retorno:
+        </span>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 10px; text-align: center;">
+          <div style="background: rgba(255,255,255,0.03); padding: 8px; border-radius: 6px;">
+            <div style="font-size: 1.1rem; font-weight: 700; color: #10b981;">$0 / mes</div>
+            <div style="font-size: 0.7rem; color: var(--text-muted);">Costo de Servidores</div>
+          </div>
+          <div style="background: rgba(255,255,255,0.03); padding: 8px; border-radius: 6px;">
+            <div style="font-size: 1.1rem; font-weight: 700; color: #38bdf8;">100% Offline</div>
+            <div style="font-size: 0.7rem; color: var(--text-muted);">Tolerancia a Caídas</div>
+          </div>
+          <div style="background: rgba(255,255,255,0.03); padding: 8px; border-radius: 6px;">
+            <div style="font-size: 1.1rem; font-weight: 700; color: #f59e0b;">React 19 + Vite</div>
+            <div style="font-size: 0.7rem; color: var(--text-muted);">Stack Ultramoderno</div>
+          </div>
+          <div style="background: rgba(255,255,255,0.03); padding: 8px; border-radius: 6px;">
+            <div style="font-size: 1.1rem; font-weight: 700; color: #a855f7;">9 Países</div>
+            <div style="font-size: 0.7rem; color: var(--text-muted);">Directorio Urgencias</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Canales de Contacto Directo / Negociación -->
+      <div style="display: flex; flex-direction: column; gap: 10px;">
+        <a href="https://wa.me/56937213459?text=Hola%20Mauricio,%20me%20interesa%20evaluar%20la%20adquisici%C3%B3n%20comercial%20o%20licencia%20B2B%20de%20HiDoctor" target="_blank" rel="noopener" class="btn btn-primary btn-block" style="background: linear-gradient(135deg, #25D366 0%, #128C7E 100%); border-color: #25D366; font-size: 1.05rem; padding: 14px 20px; display: flex; align-items: center; justify-content: center; gap: 10px; font-weight: 700; box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);">
+          <span>💬</span> Contactar al Creador por WhatsApp (+56 9 3721 3459)
+        </a>
+
+        <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+          <a href="mailto:maurouribe602@gmail.com?subject=Propuesta%20de%20Adquisici%C3%B3n%20/%20Licencia%20HiDoctor&body=Hola%20Mauricio,%20he%20revisado%20HiDoctor%20en%20la%20vitrina%20y%20nos%20gustar%C3%ADa%20conversar%20sobre..." class="btn btn-secondary" style="flex: 1; display: flex; align-items: center; justify-content: center; gap: 8px; padding: 12px 16px;">
+            <span>✉️</span> Enviar Oferta / Propuesta por Email
+          </a>
+          <button class="btn btn-outline" style="border-color: #f59e0b; color: #f59e0b;" onclick="copiarAlPortapapeles('maurouribe602@gmail.com', this)">
+            📋 Copiar Email
+          </button>
+        </div>
+      </div>
+
+      <div class="modal-footer" style="margin-top: 18px; border-top: 1px solid var(--border-subtle); padding-top: 12px;">
+        <p style="font-size: 0.78rem; color: var(--text-muted); margin: 0;">
+          🔒 Negociación confidencial directa con el autor y propietario exclusivo del código: <strong>Mauricio Jordan Uribe Maldonado</strong>. Acepta transferencia bancaria, escrow o criptoactivos (BTC / ETH / USDC).
+        </p>
       </div>
 
     </div>
