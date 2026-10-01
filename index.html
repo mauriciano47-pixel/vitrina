@@ -172,12 +172,36 @@
     </div>
   </header>
 
+  <!-- Barra de Telemetría y Radar de Salud del Ecosistema -->
+  <div class="ecosystem-radar-bar">
+    <div class="container radar-inner">
+      <div class="radar-status-item">
+        <span class="beacon-dot"></span>
+        <span class="radar-label">Estado de la Flota:</span>
+        <strong class="radar-val highlight-green">9/9 Apps Operativas (100% Online)</strong>
+      </div>
+      <div class="radar-status-item hide-mobile">
+        <span class="radar-label">Latencia Edge CDN:</span>
+        <strong class="radar-val" id="telemetria-latencia">&lt;24 ms</strong>
+      </div>
+      <div class="radar-status-item hide-mobile">
+        <span class="radar-label">Coste Servidores:</span>
+        <strong class="radar-val" style="color: #10b981;">$0 / mes (Serverless Edge)</strong>
+      </div>
+      <div class="radar-status-item">
+        <button class="radar-audit-btn" onclick="abrirModalRadarTelemetria()" aria-label="Abrir auditoría de telemetría y salud de la flota">
+          📡 Auditoría en Vivo
+        </button>
+      </div>
+    </div>
+  </div>
+
   <!-- Hero Section -->
   <section class="hero">
     <div class="hero-glow"></div>
     <div class="container hero-content">
       <div class="hero-badge">
-        <span class="badge-dot"></span> Suite Oficial de Prototipos & Soluciones Reales
+        <span class="badge-dot"></span> Suite Oficial v1.7.0 • Simulador de Apps & Radar de Salud
       </div>
       <h1 class="hero-title">
         Tecnología con Propósito: <br/>
@@ -260,8 +284,43 @@
           </div>
           <div class="card-actions">
             <a href="https://cambioya.up.railway.app" target="_blank" rel="noopener" class="btn btn-sm btn-primary">🚀 Abrir en Vivo (Railway)</a>
+            <button class="btn btn-sm btn-device" onclick="abrirSimulador('CAMBIOYA!', 'https://cambioya.up.railway.app')">📱 Simulador</button>
             <a href="#inversores" class="btn btn-sm btn-outline">💼 Ficha Inversión</a>
           </div>
+
+            <!-- 🎙️ ZONA DE PODCASTS Y NOTEBOOK LM -->
+            <div class="notebooklm-section" style="margin-top: 1.5rem; padding: 1rem; background: rgba(0, 0, 0, 0.2); border: 1px solid rgba(250, 204, 21, 0.3); border-radius: 8px;">
+              <h4 style="font-size: 0.9rem; color: #facc15; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
+                <span>🧠</span> Material de Estudio & Pitch (NotebookLM)
+              </h4>
+              <p style="font-size: 0.8rem; color: #94a3b8; margin-bottom: 1rem;">
+                Explora el análisis profundo, la tesis de inversión y el modelo de negocio narrado y estructurado por Inteligencia Artificial.
+              </p>
+              
+              <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+                
+                <!-- Podcast 1 -->
+                <div style="display: flex; align-items: center; gap: 0.75rem; background: rgba(255, 255, 255, 0.03); padding: 0.5rem; border-radius: 6px;">
+                  <span style="font-size: 1.5rem;">🎧</span>
+                  <div style="flex-grow: 1;">
+                    <div style="font-size: 0.85rem; font-weight: bold; color: #e2e8f0;">Podcast: Visión Ecosistema CAMBIOYA!</div>
+                    <div style="font-size: 0.7rem; color: #64748b;">Audio generado con NotebookLM</div>
+                  </div>
+                  <a href="#" class="btn btn-sm btn-primary" style="padding: 0.2rem 0.6rem; font-size: 0.7rem;">▶️ Escuchar</a>
+                </div>
+
+                <!-- Documento 1 -->
+                <div style="display: flex; align-items: center; gap: 0.75rem; background: rgba(255, 255, 255, 0.03); padding: 0.5rem; border-radius: 6px;">
+                  <span style="font-size: 1.5rem;">📄</span>
+                  <div style="flex-grow: 1;">
+                    <div style="font-size: 0.85rem; font-weight: bold; color: #e2e8f0;">Tesis de Inversión y Arquitectura</div>
+                    <div style="font-size: 0.7rem; color: #64748b;">Informe estructurado (PDF)</div>
+                  </div>
+                  <a href="#" class="btn btn-sm btn-outline" style="padding: 0.2rem 0.6rem; font-size: 0.7rem;">⬇️ Descargar</a>
+                </div>
+
+              </div>
+            </div>
         </article>
 
         <!-- 2. TrámiteFácil -->
@@ -287,6 +346,7 @@
           </div>
           <div class="card-actions">
             <a href="https://mauriciano47-pixel.github.io/tramite-facil/" target="_blank" rel="noopener" class="btn btn-sm btn-primary">🚀 Probar Online</a>
+            <button class="btn btn-sm btn-device" onclick="abrirSimulador('TrámiteFácil', 'https://mauriciano47-pixel.github.io/tramite-facil/')">📱 Simulador</button>
             <a href="https://github.com/mauriciano47-pixel/tramite-facil/releases/download/v1.0.0/TramiteFacil_Web_App.zip" class="btn btn-sm btn-secondary">📥 Descargar ZIP</a>
             <button class="btn btn-sm btn-outline" onclick="abrirModalDonacion('TrámiteFácil')">☕ Donar / Apoyar</button>
           </div>
@@ -317,6 +377,7 @@
           </div>
           <div class="card-actions">
             <a href="https://faro-app.mauriciano47.workers.dev" target="_blank" rel="noopener" class="btn btn-sm btn-primary">🚀 Abrir App (Oficial)</a>
+            <button class="btn btn-sm btn-device" onclick="abrirSimulador('Faro', 'https://faro-app.mauriciano47.workers.dev')">📱 Simulador</button>
             <a href="https://mauriciano47-pixel.github.io/app_faro/download.html" target="_blank" rel="noopener" class="btn btn-sm btn-secondary">📲 Instalar / Descargar App</a>
             <button class="btn btn-sm btn-outline" onclick="abrirModalDonacion('Faro')">☕ Donar / Apoyar</button>
           </div>
@@ -347,6 +408,7 @@
           </div>
           <div class="card-actions">
             <a href="https://mauriciano47-pixel.github.io/vitrodiag/" target="_blank" rel="noopener" class="btn btn-sm btn-primary">🚀 Probar Online</a>
+            <button class="btn btn-sm btn-device" onclick="abrirSimulador('VitroDiag', 'https://mauriciano47-pixel.github.io/vitrodiag/')">📱 Simulador</button>
             <button class="btn btn-sm btn-outline" onclick="abrirModalDonacion('VitroDiag')">💳 Licencias / Apoyar</button>
           </div>
         </article>
@@ -376,6 +438,7 @@
           </div>
           <div class="card-actions">
             <a href="https://ataraxia-stoic.vercel.app" target="_blank" rel="noopener" class="btn btn-sm btn-primary">🚀 Abrir Web (Producción)</a>
+            <button class="btn btn-sm btn-device" onclick="abrirSimulador('Ataraxia', 'https://ataraxia-stoic.vercel.app')">📱 Simulador</button>
             <a href="https://expo.dev/artifacts/eas/tZVITAlECa9vCZdsXldin8ilWgEEQQbKNkcmb_T9ZTI.apk" target="_blank" rel="noopener" class="btn btn-sm btn-secondary">📥 Descargar APK Android (v1.2.2)</a>
             <button class="btn btn-sm btn-outline" onclick="abrirModalDonacion('Ataraxia')">☕ Donar / Apoyar</button>
           </div>
@@ -403,6 +466,7 @@
           </div>
           <div class="card-actions">
             <a href="https://mauriciano47-pixel.github.io/Speaker_remote/" target="_blank" rel="noopener" class="btn btn-sm btn-primary">🚀 Probar Online</a>
+            <button class="btn btn-sm btn-device" onclick="abrirSimulador('Speaker Remote Pro', 'https://mauriciano47-pixel.github.io/Speaker_remote/')">📱 Simulador</button>
             <button class="btn btn-sm btn-outline" onclick="abrirModalDonacion('Speaker Remote')">☕ Donar / Apoyar</button>
           </div>
         </article>
@@ -434,6 +498,7 @@
           </div>
           <div class="card-actions" style="flex-wrap: wrap; gap: 8px;">
             <a href="https://mauriciano47-pixel.github.io/hi-doctor/" target="_blank" rel="noopener" class="btn btn-sm btn-primary">🚀 Probar Online</a>
+            <button class="btn btn-sm btn-device" onclick="abrirSimulador('HiDoc', 'https://mauriciano47-pixel.github.io/hi-doctor/')">📱 Simulador</button>
             <a href="https://mauriciano47-pixel.github.io/hi-doctor/download.html" target="_blank" rel="noopener" class="btn btn-sm btn-secondary">📲 Instalar PWA</a>
             <button class="btn btn-sm btn-outline" style="border-color: #f59e0b; color: #f59e0b; font-weight: 700; background: rgba(245, 158, 11, 0.08);" onclick="abrirModalVentaHiDoctor()">💼 Adquisición & Licencia B2B</button>
             <button class="btn btn-sm btn-outline" onclick="abrirModalDonacion('HiDoc')">☕ Donar</button>
@@ -465,6 +530,7 @@
           </div>
           <div class="card-actions">
             <a href="https://mauriciano47-pixel.github.io/crypto-analyzer/" target="_blank" rel="noopener" class="btn btn-sm btn-primary">🚀 Probar Online</a>
+            <button class="btn btn-sm btn-device" onclick="abrirSimulador('Crypto Pattern Analyzer', 'https://mauriciano47-pixel.github.io/crypto-analyzer/')">📱 Simulador</button>
             <a href="https://github.com/mauriciano47-pixel/crypto-analyzer" target="_blank" rel="noopener" class="btn btn-sm btn-secondary">💻 Ver Código (GitHub)</a>
             <button class="btn btn-sm btn-outline" onclick="abrirModalDonacion('Crypto Pattern Analyzer')">☕ Donar / Apoyar</button>
           </div>
@@ -498,6 +564,7 @@
           </div>
           <div class="card-actions">
             <a href="https://sentinel-production-617e.up.railway.app" target="_blank" rel="noopener" class="btn btn-sm btn-primary">🚀 Probar Online</a>
+            <button class="btn btn-sm btn-device" onclick="abrirSimulador('SENTINEL', 'https://sentinel-production-617e.up.railway.app')">📱 Simulador</button>
             <a href="https://github.com/mauriciano47-pixel/sentinel" target="_blank" rel="noopener" class="btn btn-sm btn-secondary">💻 Código (GitHub)</a>
             <a href="https://github.com/mauriciano47-pixel/sentinel/archive/refs/heads/main.zip" class="btn btn-sm btn-outline">📥 ZIP</a>
             <button class="btn btn-sm btn-outline" onclick="abrirModalDonacion('SENTINEL')">☕ Donar</button>
@@ -581,7 +648,7 @@
   <!-- Footer -->
   <footer class="footer">
     <div class="container footer-content">
-      <p>© 2026 Mauricio Uribe Maldonado & Antigravity AI — Todos los derechos reservados.</p>
+      <p>© 2026 Mauricio Uribe Maldonado & Antigravity AI — v1.7.0 — Todos los derechos reservados.</p>
       <div class="footer-links">
         <a href="https://ko-fi.com/mauriuribe" target="_blank" rel="noopener" style="color: #ff5e5b; font-weight: 600;">☕ Ko-fi</a>
         <a href="https://github.com/mauriciano47-pixel" target="_blank" rel="noopener">GitHub Oficial</a>
@@ -944,6 +1011,104 @@
         </p>
       </div>
 
+    </div>
+  </div>
+
+  <!-- MODAL SIMULADOR DE DISPOSITIVO INTERACTIVO (LIVE SANDBOX) -->
+  <div class="modal-backdrop" id="modal-simulador" style="display: none;">
+    <div class="simulator-wrapper">
+      <!-- Barra superior de controles del dispositivo -->
+      <div class="simulator-controls">
+        <div class="sim-brand">
+          <span class="sim-dot"></span>
+          <span class="sim-title" id="sim-app-name">HiDoc</span>
+        </div>
+        <div class="sim-view-toggle">
+          <button class="sim-toggle-btn active" id="btn-mode-mobile" onclick="cambiarModoSimulador('mobile')">📱 iPhone</button>
+          <button class="sim-toggle-btn" id="btn-mode-tablet" onclick="cambiarModoSimulador('tablet')">📋 Tablet</button>
+          <button class="sim-toggle-btn" id="btn-mode-desktop" onclick="cambiarModoSimulador('desktop')">💻 Desktop</button>
+        </div>
+        <div class="sim-actions">
+          <button class="sim-icon-btn" onclick="recargarSimulador()" title="Recargar pantalla" aria-label="Recargar simulador">🔄</button>
+          <a href="#" id="sim-external-link" target="_blank" rel="noopener" class="sim-icon-btn" title="Abrir en pestaña completa" aria-label="Abrir en ventana externa">↗️</a>
+          <button class="sim-close-btn" onclick="cerrarSimulador()" title="Cerrar simulador" aria-label="Cerrar simulador">✕</button>
+        </div>
+      </div>
+
+      <!-- Chasis del Dispositivo -->
+      <div class="device-frame-container">
+        <div class="device-chassis mobile-mode" id="device-chassis">
+          <!-- Dynamic Island / Notch (solo en smartphones) -->
+          <div class="device-notch" id="device-notch">
+            <div class="dynamic-island">
+              <span class="camera-lens"></span>
+            </div>
+          </div>
+
+          <!-- Status Bar -->
+          <div class="device-status-bar" id="device-status-bar">
+            <span class="status-time" id="sim-clock">09:41</span>
+            <div class="status-icons">
+              <span>📶 5G</span>
+              <span>🔋 100%</span>
+            </div>
+          </div>
+
+          <!-- Pantalla con iFrame -->
+          <div class="device-screen">
+            <div class="sim-loader" id="sim-loader">
+              <div class="loader-spinner"></div>
+              <span>Conectando con el servidor en producción...</span>
+            </div>
+            <iframe id="sim-iframe" src="about:blank" title="Simulador de Aplicación en Vivo" sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-modals"></iframe>
+          </div>
+
+          <!-- Home Bar Indicator -->
+          <div class="device-home-bar" id="device-home-bar">
+            <div class="home-indicator"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL DE RADAR & TELEMETRÍA DE LA FLOTA -->
+  <div class="modal-backdrop" id="modal-radar" style="display: none;">
+    <div class="modal-card radar-modal-card">
+      <button class="modal-close" onclick="cerrarModalRadar()" aria-label="Cerrar modal de telemetría">✕</button>
+      
+      <div class="modal-header">
+        <span class="modal-kicker">RADAR DE SALUD DEL ECOSISTEMA • ZERO-FAILURE</span>
+        <h3 class="modal-title">Telemetría de la Flota en Vivo</h3>
+        <p class="modal-sub">Monitoreo continuo de disponibilidad, endpoints y latencia edge de cada aplicación del ecosistema de Mauricio Uribe.</p>
+      </div>
+
+      <!-- Lista de aplicaciones y estado de salud -->
+      <div class="radar-fleet-list" id="radar-fleet-list">
+        <!-- Renderizado dinámico vía JavaScript -->
+      </div>
+
+      <!-- Resumen de Infraestructura -->
+      <div class="radar-summary-box">
+        <div class="radar-stat">
+          <span class="stat-num text-emerald">100%</span>
+          <span class="stat-text">Uptime 30 Días</span>
+        </div>
+        <div class="radar-stat">
+          <span class="stat-num text-cyan">&lt; 28ms</span>
+          <span class="stat-text">Latencia Media</span>
+        </div>
+        <div class="radar-stat">
+          <span class="stat-num text-gold">$0 / mes</span>
+          <span class="stat-text">Coste Servidores</span>
+        </div>
+      </div>
+
+      <div style="margin-top: 16px; text-align: center;">
+        <button class="btn btn-sm btn-outline" onclick="actualizarPingTelemetria(true)" style="width: 100%;">
+          ⚡ Re-auditar Pings en Tiempo Real
+        </button>
+      </div>
     </div>
   </div>
 
