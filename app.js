@@ -281,7 +281,7 @@ const FLOTA_APPS = [
   { id: 'vitrodiag', name: 'VitroDiag', host: 'GitHub Pages PWA', url: 'https://mauriciano47-pixel.github.io/vitrodiag/', category: 'Industria del Vidrio Hot End' },
   { id: 'crypto', name: 'Crypto Pattern Analyzer', host: 'GitHub Pages WebSocket', url: 'https://mauriciano47-pixel.github.io/crypto-analyzer/', category: 'Binance Streaming 60 FPS' },
   { id: 'tramitefacil', name: 'TrámiteFácil', host: 'GitHub Pages PWA', url: 'https://mauriciano47-pixel.github.io/tramite-facil/', category: 'Accesibilidad & Gemini IA' },
-  { id: 'sentinel', name: 'SENTINEL', host: 'Railway Node.js', url: 'https://sentinel-production-617e.up.railway.app', category: 'Ciberseguridad & RGPD 17' },
+  { id: 'sentinel', name: 'SENTINEL', host: 'Railway Node.js', url: 'https://sentinel-app.up.railway.app', category: 'Ciberseguridad & RGPD 17' },
   { id: 'speaker', name: 'Speaker Remote Pro', host: 'GitHub Pages Web Bluetooth', url: 'https://mauriciano47-pixel.github.io/Speaker_remote/', category: 'Hardware Audio DSP' }
 ];
 

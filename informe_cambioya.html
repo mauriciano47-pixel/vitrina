@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Informe Técnico y Visión: CAMBIOYA!</title>
+    <style>
+        body { font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; margin: 0; padding: 40px; }
+        h1 { color: #0f172a; border-bottom: 3px solid #2563eb; padding-bottom: 10px; font-size: 2.2em; }
+        h2 { color: #1e3a8a; margin-top: 30px; font-size: 1.5em; border-bottom: 1px solid #cbd5e1; padding-bottom: 5px; }
+        h3 { color: #0369a1; }
+        p { text-align: justify; }
+        ul { margin-bottom: 20px; }
+        li { margin-bottom: 8px; }
+        .highlight { background-color: #f0f9ff; padding: 15px; border-left: 4px solid #0284c7; margin: 20px 0; }
+        .badge { display: inline-block; padding: 3px 8px; background: #e2e8f0; border-radius: 4px; font-size: 0.85em; font-weight: bold; color: #475569; margin-right: 5px;}
+        .footer { margin-top: 50px; font-size: 0.9em; color: #94a3b8; text-align: center; border-top: 1px solid #e2e8f0; padding-top: 20px; }
+    </style>
+</head>
+<body>
+    <h1>CAMBIOYA! — Arquitectura, Visión y Estado Actual</h1>
+    <p><strong>Fecha de Corte:</strong> Octubre 2026<br>
+    <strong>Autor / Fundador:</strong> Mauricio Uribe Maldonado<br>
+    <strong>Naturaleza del Proyecto:</strong> Plataforma Comunitaria de Trueque Directo & Economía Circular sin Dinero</p>
+
+    <div class="highlight">
+        <strong>Resumen Ejecutivo:</strong> CAMBIOYA! no es un e-commerce ni una fintech. Es una plataforma hiperlocal de economía circular diseñada para conectar a ciudadanos mediante el intercambio asimétrico de bienes y servicios, eliminando el dinero como barrera transaccional. Tecnológicamente, es una Progressive Web App (PWA) impulsada por Inteligencia Artificial y geolocalización.
+    </div>
+
+    <h2>1. Evolución Histórica (Lo que fue vs. Lo que es)</h2>
+    <p><strong>El Origen:</strong> Inicialmente concebido como un prototipo de clasificados donde los usuarios podían ofrecer artículos. Carecía de inteligencia, seguridad física y flujos de negociación complejos.</p>
+    <p><strong>La Actualidad (Nivel Empresarial):</strong> CAMBIOYA! ha evolucionado hacia un motor transaccional completo. Ahora incluye negociación en tiempo real (ofertas, contraofertas), seguridad para encuentros físicos (tickets offline), y un ecosistema simulado de pruebas de estrés (bots autónomos) que garantiza un funcionamiento impecable en producción (Railway).</p>
+
+    <h2>2. Arquitectura de Software y Stack Tecnológico</h2>
+    <ul>
+        <li><span class="badge">Backend</span> <strong>Django (Python):</strong> Arquitectura MTV (Model-Template-View) robusta, segura y escalable.</li>
+        <li><span class="badge">Real-Time</span> <strong>WebSockets (ASGI / Daphne):</strong> Integración de Django Channels para el chat de negociación en tiempo real e intercambio de imágenes.</li>
+        <li><span class="badge">Frontend</span> <strong>PWA (Progressive Web App):</strong> Interfaz instalable en móviles (Offline-First) con un diseño <em>Cyber-Obsidian</em> (Modo Oscuro OLED, Glassmorphism).</li>
+        <li><span class="badge">Haptics</span> <strong>API navigator.vibrate:</strong> Retroalimentación táctil nativa en botones de acción para una experiencia móvil inmersiva.</li>
+        <li><span class="badge">BBDD</span> <strong>SQLite / PostgreSQL:</strong> Modelado relacional complejo que maneja inventarios, listas de deseos (wishlists), notificaciones y perfiles de usuario.</li>
+    </ul>
+
+    <h2>3. Características Técnicas Principales (Features)</h2>
+    <ul>
+        <li><strong>Smart Match IA (El Oráculo):</strong> Algoritmo proactivo que cruza continuamente los inventarios de los usuarios con sus <em>Wishlists</em> para sugerir automáticamente trueques perfectos.</li>
+        <li><strong>Auto-Tasador Vision (Gemini 1.5 Pro):</strong> Integración directa con Google Gemini Vision. Al subir la foto de un artículo, la IA analiza la imagen, auto-completa el título, deduce la categoría y sugiere un valor estimado de mercado (precio referencial).</li>
+        <li><strong>Radar Hiperlocal (Haversine):</strong> Motor de geolocalización que calcula la curvatura de la tierra para filtrar artículos a menos de 3 kilómetros a la redonda, priorizando la comunidad local inmediata.</li>
+        <li><strong>Sistema de Seguridad Física (Ticket PDF):</strong> Generación en servidor (ReportLab) de un "Pase de Abordaje" imprimible (offline) con códigos QR y reglas de encuentro seguro una vez que se concreta un trato.</li>
+        <li><strong>Módulo de Trueque Solidario:</strong> Un sistema de donación ("Zero Egoísmo") donde los usuarios pueden etiquetar artículos con un "Badge Rojo", fijando su valor a  para regalarlos a vecinos que los necesiten.</li>
+        <li><strong>Verificación de Identidad y Gamificación:</strong> Panel de "Check Azul" tras firmar un Código de Honor digital. Sistema de medallas dinámicas ("Pionero Fundador" para los primeros 100 usuarios, "Top Trader").</li>
+        <li><strong>Simulador Autónomo de Estrés:</strong> Script de backend de ingesta masiva capaz de simular ciclos diarios: crea usuarios bot, sube inventario fotorealista HD, cruza ofertas aceptadas y ofertas frustradas para testear la resistencia del servidor.</li>
+    </ul>
+
+    <h2>4. Ventajas Competitivas y Diferenciadores</h2>
+    <p>A diferencia de Facebook Marketplace o Yapo (que se centran en la compra-venta con fricción monetaria), CAMBIOYA! monopoliza el concepto de <strong>Negociación Asimétrica sin Dinero</strong>. Sus ventajas técnicas son:</p>
+    <ul>
+        <li><strong>Costos de Infraestructura Minimizados ( Deuda Técnica):</strong> Arquitectura optimizada sin frameworks frontend pesados, renderizado híbrido rápido y protección de cuotas API de Inteligencia Artificial mediante conmutación a caché local.</li>
+        <li><strong>Seguridad por Diseño (Zero-Trust UI):</strong> Los usuarios están obligados a usar el "Ticket Seguro" y el chat auditado interno, desincentivando estafas comunes en redes sociales.</li>
+        <li><strong>Hiper-Personalización Visual:</strong> El ecosistema se aleja del diseño estéril corporativo y abraza una estética "Cyber-Obsidian" con neones azules, esmeraldas y transparencias que retienen la atención.</li>
+    </ul>
+
+    <h2>5. Visión a Futuro (Roadmap)</h2>
+    <p>El objetivo a mediano plazo es integrar logística comunitaria (puntos de entrega verificados en almacenes de barrio), sumar módulos institucionales B2G donde las municipalidades puedan incentivar el reciclaje y trueque mediante reducción de impuestos locales, y expandir el motor <em>Smart Match IA</em> para sugerir "Trueques Triangulares" (A le da a B, B le da a C, C le da a A).</p>
+
+    <div class="footer">
+        Documento generado automáticamente por Antigravity AI para ingesta en Google NotebookLM.<br>
+        Propiedad Intelectual: Mauricio Uribe Maldonado - Ecosistema CAMBIOYA!
+    </div>
+</body>
+</html>
