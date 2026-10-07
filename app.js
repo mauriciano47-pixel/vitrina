@@ -276,7 +276,7 @@ function compartirVitrina() {
 const FLOTA_APPS = [
   { id: 'cambioya', name: 'CAMBIOYA!', host: 'Railway ASGI', url: 'https://cambioya.up.railway.app', category: 'Trueque & Economía Circular' },
   { id: 'hidoctor', name: 'HiDoc', host: 'GitHub Pages PWA', url: 'https://mauriciano47-pixel.github.io/hi-doctor/', category: 'Salud Pediátrica & IA' },
-  { id: 'nutralive', name: 'NutraLive', host: 'Cloudflare / GitHub Pages', url: 'https://nutralive.mauriciano47.workers.dev/', category: 'Nutrición Terapéutica & MASLD' },
+  { id: 'nutralive', name: 'NutraLive', host: 'Cloudflare Pages PWA', url: 'https://nutralive.pages.dev/', category: 'Nutrición Terapéutica & MASLD' },
   { id: 'ataraxia', name: 'Ataraxia', host: 'Vercel Edge / EAS', url: 'https://ataraxia-stoic.vercel.app', category: 'Fitness & Mentalidad Estoica' },
   { id: 'faro', name: 'Faro', host: 'Cloudflare Workers PWA', url: 'https://faro-app.mauriciano47.workers.dev', category: 'Seguridad SOS & GPS' },
   { id: 'vitrodiag', name: 'VitroDiag', host: 'GitHub Pages PWA', url: 'https://mauriciano47-pixel.github.io/vitrodiag/', category: 'Industria del Vidrio Hot End' },
