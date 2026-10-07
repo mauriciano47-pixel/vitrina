@@ -98,6 +98,15 @@
           {
             "@type": "SoftwareApplication",
             "position": 3,
+            "name": "NutraLive",
+            "operatingSystem": "Web / Mobile PWA Offline-First",
+            "applicationCategory": "HealthApplication",
+            "description": "Nutrición Clínica de Precisión, Escudo Hepático contra la fructosa oculta y Reversión de Hígado Graso (MASLD).",
+            "url": "https://nutralive.mauriciano47.workers.dev/"
+          },
+          {
+            "@type": "SoftwareApplication",
+            "position": 4,
             "name": "Ataraxia",
             "operatingSystem": "Android / Web PWA",
             "applicationCategory": "FitnessApplication",
@@ -178,7 +187,7 @@
       <div class="radar-status-item">
         <span class="beacon-dot"></span>
         <span class="radar-label">Estado de la Flota:</span>
-        <strong class="radar-val highlight-green">9/9 Apps Operativas (100% Online)</strong>
+        <strong class="radar-val highlight-green">10/10 Apps Operativas (100% Online)</strong>
       </div>
       <div class="radar-status-item hide-mobile">
         <span class="radar-label">Latencia Edge CDN:</span>
@@ -215,7 +224,7 @@
       <!-- Métricas / Tracción en vivo -->
       <div class="metrics-grid">
         <div class="metric-card">
-          <span class="metric-num">8+</span>
+          <span class="metric-num">10</span>
           <span class="metric-label">Apps en Producción 24/7</span>
         </div>
         <div class="metric-card highlight-metric">
@@ -252,7 +261,7 @@
         <button class="pill active" data-filter="all">Todas</button>
         <button class="pill" data-filter="flagship">⭐ Buque Insignia</button>
         <button class="pill" data-filter="fintech">📈 FinTech & Trading</button>
-        <button class="pill" data-filter="salud">🩺 Salud & Pediatría</button>
+        <button class="pill" data-filter="salud">🩺 Salud & Nutrición Clínica</button>
         <button class="pill" data-filter="industria">🏭 Industria del Vidrio</button>
         <button class="pill" data-filter="accesibilidad">🗂️ Accesibilidad & IA</button>
         <button class="pill" data-filter="seguridad">🚨 Seguridad & Privacidad</button>
@@ -505,7 +514,41 @@
           </div>
         </article>
 
-        <!-- 8. Crypto Pattern Analyzer -->
+        <!-- 8. NutraLive (Junto a HiDoc en Salud & Biotecnología) -->
+        <article class="app-card" data-category="salud">
+          <div class="card-badge emerald">🥑 v1.1.0 • SALUD & BIOTECNOLOGÍA • ESCUDO HEPÁTICO & REVERSIÓN MASLD</div>
+          <div class="card-header">
+            <div class="app-icon-box logo-img-box emerald-border">
+              <img src="logo_nutralive.svg" alt="Logo NutraLive" class="app-real-logo" />
+            </div>
+            <div>
+              <h3 class="app-title">NutraLive</h3>
+              <span class="app-category">Nutrición de Precisión, Escudo Hepático & Reversión MASLD</span>
+            </div>
+          </div>
+          <p class="app-desc">
+            Plataforma clínica de nutrición terapéutica diseñada para familias y pacientes con dietas estrictas y reversión del Hígado Graso (MASLD / NAFLD). Integra Semáforo Hepático Inteligente con detección de Jarabe de Maíz de Alta Fructosa (JMAF) y 40+ azúcares ocultos, función "Cambio Seguro" (Healthy Swaps), Chef Terapéutico Familiar Anti-Frustración, Bitácora de Transaminasas (ALT/AST) con curva SVG vectorial, pre-pantalla cinemática de 3s y lobby de verificación dual (Tutor Familiar vs Especialista Clínico).
+          </p>
+          <div class="feature-tags">
+            <span>Semáforo Hepático</span>
+            <span>Anti-JMAF (Fructosa Oculta)</span>
+            <span>Cambio Seguro (Swaps)</span>
+            <span>Curva ALT/AST SVG</span>
+            <span>Chef Anti-Frustración</span>
+            <span>Lobby Clínico & Tutor</span>
+            <span>Django REST + React 19</span>
+            <span>PWA Offline-First</span>
+          </div>
+          <div class="card-actions" style="flex-wrap: wrap; gap: 8px;">
+            <a href="https://nutralive.mauriciano47.workers.dev/" target="_blank" rel="noopener" class="btn btn-sm btn-primary">🚀 Probar Online (Cloudflare)</a>
+            <button class="btn btn-sm btn-device" onclick="abrirSimulador('NutraLive', 'https://nutralive.mauriciano47.workers.dev/')">📱 Simulador</button>
+            <a href="https://mauriciano47-pixel.github.io/nutralive/" target="_blank" rel="noopener" class="btn btn-sm btn-secondary">🌐 Espejo GitHub Pages</a>
+            <a href="https://github.com/mauriciano47-pixel/nutralive" target="_blank" rel="noopener" class="btn btn-sm btn-outline">💻 Ver Código (GitHub)</a>
+            <button class="btn btn-sm btn-outline" onclick="abrirModalDonacion('NutraLive')">☕ Donar / Apoyar</button>
+          </div>
+        </article>
+
+        <!-- 9. Crypto Pattern Analyzer -->
         <article class="app-card" data-category="fintech">
           <div class="card-badge emerald">🪙 v1.3.0 • FINTECH & STREAMING BINANCE 60 FPS • ACCESO AUTÓNOMO</div>
           <div class="card-header">
@@ -536,7 +579,7 @@
           </div>
         </article>
 
-        <!-- 9. SENTINEL -->
+        <!-- 10. SENTINEL -->
         <article class="app-card" data-category="seguridad">
           <div class="card-badge blue">🛡️ v1.3.2 • PRODUCCIÓN EN RAILWAY • GUARDIÁN DE PRIVACIDAD SOBERANA & RGPD ART. 17</div>
           <div class="card-header">
