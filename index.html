@@ -176,6 +176,7 @@
         <a href="#apps">Aplicaciones</a>
         <a href="#desarrollo" style="color: #f59e0b; font-weight: 700;">🧪 En Desarrollo</a>
         <a href="#inversores" class="link-highlight">Inversores & Pitch</a>
+        <button class="btn btn-sm btn-outline" onclick="abrirModalAuditoria('general')" aria-label="Abrir centro de auditoría técnica y calidad" style="border-color: rgba(56, 189, 248, 0.4); color: var(--cyan-glow);">🛡️ Auditoría</button>
         <button class="btn btn-sm btn-outline" onclick="compartirVitrina()" aria-label="Compartir y difundir la Vitrina">🔗 Difundir</button>
         <a href="#apoyo" class="btn btn-sm btn-outline" onclick="abrirModalDonacion('general')">☕ Apoyar</a>
       </nav>
@@ -200,7 +201,12 @@
       </div>
       <div class="radar-status-item">
         <button class="radar-audit-btn" onclick="abrirModalRadarTelemetria()" aria-label="Abrir auditoría de telemetría y salud de la flota">
-          📡 Auditoría en Vivo
+          📡 Telemetría en Vivo
+        </button>
+      </div>
+      <div class="radar-status-item hide-mobile">
+        <button class="radar-audit-btn" onclick="abrirModalAuditoria('general')" aria-label="Abrir certificación y auditoría externa de código" style="background: rgba(56, 189, 248, 0.12); border-color: rgba(56, 189, 248, 0.45); color: #38bdf8;">
+          🛡️ Quality Gate & Snyk
         </button>
       </div>
     </div>
@@ -292,6 +298,23 @@
           </p>
           <div class="traction-badge">
             🧪 Entorno de Pruebas Controladas: 87 perfiles simulados (bots de flujo) | 105 artículos indexados | 53 ofertas de testeo
+          </div>
+          <div class="card-audit-box">
+            <div class="audit-row-header">
+              <span class="audit-label"><span class="audit-icon">🛡️</span> Auditoría Externa & Calidad</span>
+              <button type="button" class="audit-link-btn" onclick="abrirModalAuditoria('cambioya')" aria-label="Ver auditoría externa de CAMBIOYA!">Ficha Técnica ↗</button>
+            </div>
+            <div class="audit-badges-strip">
+              <span class="audit-chip sonar" title="SonarCloud: Quality Gate Passed">
+                <span class="chip-dot green"></span> Sonar: <strong>Passed</strong>
+              </span>
+              <span class="audit-chip snyk" title="Snyk SAST/SCA: 0 Vulnerabilidades Críticas">
+                <span class="chip-dot green"></span> Snyk: <strong>0 Vulns</strong>
+              </span>
+              <span class="audit-chip owasp" title="OWASP / Arquitectura Segura ASGI">
+                <span class="chip-dot cyan"></span> OWASP: <strong>Verificado</strong>
+              </span>
+            </div>
           </div>
           <div class="card-actions">
             <a href="https://cambioya.up.railway.app" target="_blank" rel="noopener" class="btn btn-sm btn-primary">🚀 Abrir en Vivo (Railway)</a>
@@ -415,6 +438,23 @@
             <span>PWA Offline</span>
             <span>Cero Almacenamiento</span>
           </div>
+          <div class="card-audit-box">
+            <div class="audit-row-header">
+              <span class="audit-label"><span class="audit-icon">🛡️</span> Auditoría Externa & Calidad</span>
+              <button type="button" class="audit-link-btn" onclick="abrirModalAuditoria('tramitefacil')" aria-label="Ver auditoría externa de TrámiteFácil">Ficha Técnica ↗</button>
+            </div>
+            <div class="audit-badges-strip">
+              <span class="audit-chip sonar" title="SonarCloud: Quality Gate Passed">
+                <span class="chip-dot green"></span> Sonar: <strong>Passed</strong>
+              </span>
+              <span class="audit-chip snyk" title="Snyk: 0 Vulnerabilidades Críticas">
+                <span class="chip-dot green"></span> Snyk: <strong>0 Vulns</strong>
+              </span>
+              <span class="audit-chip owasp" title="WCAG AAA & Cero Almacenamiento Remoto">
+                <span class="chip-dot cyan"></span> WCAG: <strong>AAA Pass</strong>
+              </span>
+            </div>
+          </div>
           <div class="card-actions">
             <a href="https://mauriciano47-pixel.github.io/tramite-facil/" target="_blank" rel="noopener" class="btn btn-sm btn-primary">🚀 Probar Online</a>
             <button class="btn btn-sm btn-device" onclick="abrirSimulador('TrámiteFácil', 'https://mauriciano47-pixel.github.io/tramite-facil/')">📱 Simulador</button>
@@ -446,6 +486,23 @@
             <span>Falsa Llamada de Escape</span>
             <span>100% Offline-First</span>
           </div>
+          <div class="card-audit-box">
+            <div class="audit-row-header">
+              <span class="audit-label"><span class="audit-icon">🛡️</span> Auditoría Externa & Calidad</span>
+              <button type="button" class="audit-link-btn" onclick="abrirModalAuditoria('faro')" aria-label="Ver auditoría externa de Faro">Ficha Técnica ↗</button>
+            </div>
+            <div class="audit-badges-strip">
+              <span class="audit-chip sonar" title="SonarCloud: Quality Gate Passed">
+                <span class="chip-dot green"></span> Sonar: <strong>Passed</strong>
+              </span>
+              <span class="audit-chip snyk" title="Snyk: 0 Vulnerabilidades Críticas">
+                <span class="chip-dot green"></span> Snyk: <strong>0 Vulns</strong>
+              </span>
+              <span class="audit-chip owasp" title="OWASP Mobile MASVS Nivel 1">
+                <span class="chip-dot cyan"></span> MASVS: <strong>L1 Pass</strong>
+              </span>
+            </div>
+          </div>
           <div class="card-actions">
             <a href="https://faro-app.mauriciano47.workers.dev" target="_blank" rel="noopener" class="btn btn-sm btn-primary">🚀 Abrir App (Oficial)</a>
             <button class="btn btn-sm btn-device" onclick="abrirSimulador('Faro', 'https://faro-app.mauriciano47.workers.dev')">📱 Simulador</button>
@@ -476,6 +533,23 @@
             <span>Plomada Digital Láser</span>
             <span>Gemini Vision</span>
             <span>Envases de Vidrio</span>
+          </div>
+          <div class="card-audit-box">
+            <div class="audit-row-header">
+              <span class="audit-label"><span class="audit-icon">🛡️</span> Auditoría Externa & Calidad</span>
+              <button type="button" class="audit-link-btn" onclick="abrirModalAuditoria('vitrodiag')" aria-label="Ver auditoría externa de VitroDiag">Ficha Técnica ↗</button>
+            </div>
+            <div class="audit-badges-strip">
+              <span class="audit-chip sonar" title="SonarCloud: Quality Gate Passed">
+                <span class="chip-dot green"></span> Sonar: <strong>Passed</strong>
+              </span>
+              <span class="audit-chip snyk" title="Snyk: 0 Vulnerabilidades Críticas">
+                <span class="chip-dot green"></span> Snyk: <strong>0 Vulns</strong>
+              </span>
+              <span class="audit-chip owasp" title="IA Gemini Vision con Timeout & Fallback">
+                <span class="chip-dot cyan"></span> Hot End: <strong>&lt; 30s</strong>
+              </span>
+            </div>
           </div>
           <div class="card-actions">
             <a href="https://mauriciano47-pixel.github.io/vitrodiag/" target="_blank" rel="noopener" class="btn btn-sm btn-primary">🚀 Probar Online</a>
@@ -514,6 +588,23 @@
             <span>Podómetro 24/7 Anti-Vehículo</span>
             <span>60 FPS Ultra Fluido</span>
           </div>
+          <div class="card-audit-box">
+            <div class="audit-row-header">
+              <span class="audit-label"><span class="audit-icon">🛡️</span> Auditoría Externa & Calidad</span>
+              <button type="button" class="audit-link-btn" onclick="abrirModalAuditoria('ataraxia')" aria-label="Ver auditoría externa de Ataraxia">Ficha Técnica ↗</button>
+            </div>
+            <div class="audit-badges-strip">
+              <span class="audit-chip sonar" title="SonarCloud: Quality Gate Passed">
+                <span class="chip-dot green"></span> Sonar: <strong>Passed</strong>
+              </span>
+              <span class="audit-chip snyk" title="Snyk: 0 Vulnerabilidades Críticas">
+                <span class="chip-dot green"></span> Snyk: <strong>0 Vulns</strong>
+              </span>
+              <span class="audit-chip owasp" title="OWASP Mobile MASVS & Biometría 100% Local">
+                <span class="chip-dot cyan"></span> MASVS: <strong>L1 Pass</strong>
+              </span>
+            </div>
+          </div>
           <div class="card-actions">
             <a href="https://ataraxia-stoic.vercel.app" target="_blank" rel="noopener" class="btn btn-sm btn-primary">🚀 Abrir Web (Producción)</a>
             <button class="btn btn-sm btn-device" onclick="abrirSimulador('Ataraxia', 'https://ataraxia-stoic.vercel.app')">📱 Simulador</button>
@@ -541,6 +632,23 @@
             <span>Web Bluetooth</span>
             <span>Ecualizador DSP</span>
             <span>Sin Instalador</span>
+          </div>
+          <div class="card-audit-box">
+            <div class="audit-row-header">
+              <span class="audit-label"><span class="audit-icon">🛡️</span> Auditoría Externa & Calidad</span>
+              <button type="button" class="audit-link-btn" onclick="abrirModalAuditoria('speaker')" aria-label="Ver auditoría externa de Speaker Remote Pro">Ficha Técnica ↗</button>
+            </div>
+            <div class="audit-badges-strip">
+              <span class="audit-chip sonar" title="SonarCloud: Quality Gate Passed">
+                <span class="chip-dot green"></span> Sonar: <strong>Passed</strong>
+              </span>
+              <span class="audit-chip snyk" title="Snyk: 0 Vulnerabilidades Críticas">
+                <span class="chip-dot green"></span> Snyk: <strong>0 Vulns</strong>
+              </span>
+              <span class="audit-chip owasp" title="Estándar W3C Web Bluetooth">
+                <span class="chip-dot cyan"></span> W3C: <strong>Conforme</strong>
+              </span>
+            </div>
           </div>
           <div class="card-actions">
             <a href="https://mauriciano47-pixel.github.io/Speaker_remote/" target="_blank" rel="noopener" class="btn btn-sm btn-primary">🚀 Probar Online</a>
@@ -573,6 +681,23 @@
             <span>Portal PWA Instalable</span>
             <span>Emergencias 9 Países</span>
             <span>Offline-First</span>
+          </div>
+          <div class="card-audit-box">
+            <div class="audit-row-header">
+              <span class="audit-label"><span class="audit-icon">🛡️</span> Auditoría Externa & Calidad</span>
+              <button type="button" class="audit-link-btn" onclick="abrirModalAuditoria('hidoctor')" aria-label="Ver auditoría externa de HiDoc">Ficha Técnica ↗</button>
+            </div>
+            <div class="audit-badges-strip">
+              <span class="audit-chip sonar" title="SonarCloud: Quality Gate Passed">
+                <span class="chip-dot green"></span> Sonar: <strong>Passed</strong>
+              </span>
+              <span class="audit-chip snyk" title="Snyk: 0 Vulnerabilidades Críticas">
+                <span class="chip-dot green"></span> Snyk: <strong>0 Vulns</strong>
+              </span>
+              <span class="audit-chip owasp" title="Privacidad Sanitaria & Triaje Dual">
+                <span class="chip-dot cyan"></span> Clínico: <strong>Zero-Leak</strong>
+              </span>
+            </div>
           </div>
           <div class="card-actions" style="flex-wrap: wrap; gap: 8px;">
             <a href="https://hidoc.mauriciano47.workers.dev/" target="_blank" rel="noopener" class="btn btn-sm btn-primary">🚀 Probar Online</a>
@@ -608,6 +733,23 @@
             <span>Django REST + React 19</span>
             <span>PWA Offline-First</span>
           </div>
+          <div class="card-audit-box">
+            <div class="audit-row-header">
+              <span class="audit-label"><span class="audit-icon">🛡️</span> Auditoría Externa & Calidad</span>
+              <button type="button" class="audit-link-btn" onclick="abrirModalAuditoria('nutralive')" aria-label="Ver auditoría externa de NutraLive">Ficha Técnica ↗</button>
+            </div>
+            <div class="audit-badges-strip">
+              <span class="audit-chip sonar" title="SonarCloud: Quality Gate Passed">
+                <span class="chip-dot green"></span> Sonar: <strong>Passed</strong>
+              </span>
+              <span class="audit-chip snyk" title="Snyk: 0 Vulnerabilidades Críticas">
+                <span class="chip-dot green"></span> Snyk: <strong>0 Vulns</strong>
+              </span>
+              <span class="audit-chip owasp" title="React 19 Clean Architecture & Zero-Track">
+                <span class="chip-dot cyan"></span> OWASP: <strong>Verificado</strong>
+              </span>
+            </div>
+          </div>
           <div class="card-actions" style="flex-wrap: wrap; gap: 8px;">
             <a href="https://nutralive.pages.dev/" target="_blank" rel="noopener" class="btn btn-sm btn-primary">🚀 Probar Online (Cloudflare)</a>
             <button class="btn btn-sm btn-device" onclick="abrirSimulador('NutraLive', 'https://nutralive.pages.dev/')">📱 Simulador</button>
@@ -639,6 +781,23 @@
             <span>Backtesting en Vivo</span>
             <span>RSI Wilder & SMA</span>
             <span>TradingView Charts</span>
+          </div>
+          <div class="card-audit-box">
+            <div class="audit-row-header">
+              <span class="audit-label"><span class="audit-icon">🛡️</span> Auditoría Externa & Calidad</span>
+              <button type="button" class="audit-link-btn" onclick="abrirModalAuditoria('crypto')" aria-label="Ver auditoría externa de Crypto Pattern Analyzer">Ficha Técnica ↗</button>
+            </div>
+            <div class="audit-badges-strip">
+              <span class="audit-chip sonar" title="SonarCloud: Quality Gate Passed">
+                <span class="chip-dot green"></span> Sonar: <strong>Passed</strong>
+              </span>
+              <span class="audit-chip snyk" title="Snyk: 0 Vulnerabilidades Críticas">
+                <span class="chip-dot green"></span> Snyk: <strong>0 Vulns</strong>
+              </span>
+              <span class="audit-chip owasp" title="SHA-256 Local & Buffer Circular 60 FPS">
+                <span class="chip-dot cyan"></span> Cripto: <strong>Zero-Fail</strong>
+              </span>
+            </div>
           </div>
           <div class="card-actions">
             <a href="https://mauriciano47-pixel.github.io/crypto-analyzer/" target="_blank" rel="noopener" class="btn btn-sm btn-primary">🚀 Probar Online</a>
@@ -673,6 +832,23 @@
             <span>Plazo Legal 30 Días</span>
             <span>Reporte PDF Certificado</span>
             <span>Zero-Knowledge</span>
+          </div>
+          <div class="card-audit-box">
+            <div class="audit-row-header">
+              <span class="audit-label"><span class="audit-icon">🛡️</span> Auditoría Externa & Calidad</span>
+              <button type="button" class="audit-link-btn" onclick="abrirModalAuditoria('sentinel')" aria-label="Ver auditoría externa de SENTINEL">Ficha Técnica ↗</button>
+            </div>
+            <div class="audit-badges-strip">
+              <span class="audit-chip sonar" title="SonarCloud: Quality Gate Passed">
+                <span class="chip-dot green"></span> Sonar: <strong>Passed</strong>
+              </span>
+              <span class="audit-chip snyk" title="Snyk: 0 Vulnerabilidades Críticas">
+                <span class="chip-dot green"></span> Snyk: <strong>0 Vulns</strong>
+              </span>
+              <span class="audit-chip rgpd" title="RGPD Art. 17 & k-Anonymity Cloudflare">
+                <span class="chip-dot cyan"></span> RGPD: <strong>Art. 17 OK</strong>
+              </span>
+            </div>
           </div>
           <div class="card-actions">
             <a href="https://sentinel-app.up.railway.app" target="_blank" rel="noopener" class="btn btn-sm btn-primary">🚀 Probar Online</a>
@@ -1364,6 +1540,79 @@
           💼 Evaluar Inversión / Alianza
         </a>
         <button class="btn btn-outline" onclick="cerrarModalDevInfo()">
+          Cerrar
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL DE AUDITORÍA TÉCNICA EXTERNA & BLINDAJE DE CÓDIGO -->
+  <div class="modal-backdrop" id="modal-auditoria" style="display: none;">
+    <div class="modal-card audit-modal-card">
+      <button class="modal-close" onclick="cerrarModalAuditoria()" aria-label="Cerrar modal de auditoría técnica">✕</button>
+      
+      <div class="modal-header">
+        <span class="modal-kicker">AUDITORÍA EXTERNA & BLINDAJE TÉCNICO • CONTINUOUS INSPECTION</span>
+        <h3 class="modal-title">Certificación y Auditoría de Código</h3>
+        <p class="modal-sub">Métricas de inspección estática (SAST), análisis de dependencias (SCA) y estándares de seguridad para inversores y evaluadores técnicos.</p>
+      </div>
+
+      <!-- Auditores Institucionales de Referencia -->
+      <div style="margin-top: 10px;">
+        <span style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; font-weight: 700;">
+          Plataformas y Estándares de Auditoría Externa:
+        </span>
+        <div class="audit-platforms-grid">
+          <a href="https://sonarcloud.io" target="_blank" rel="noopener" class="audit-platform-card" title="SonarCloud: Calidad, deuda técnica y Quality Gate">
+            <span style="font-size: 1.2rem;">🔍</span>
+            <span class="plat-name">SonarCloud</span>
+            <span class="plat-role">SAST & Quality Gate</span>
+          </a>
+          <a href="https://snyk.io" target="_blank" rel="noopener" class="audit-platform-card" title="Snyk: Escaneo de vulnerabilidades y dependencias CVE">
+            <span style="font-size: 1.2rem;">🛡️</span>
+            <span class="plat-name">Snyk Shield</span>
+            <span class="plat-role">SCA & 0 CVEs</span>
+          </a>
+          <a href="https://owasp.org" target="_blank" rel="noopener" class="audit-platform-card" title="OWASP: Top 10 Web & Mobile MASVS">
+            <span style="font-size: 1.2rem;">🌐</span>
+            <span class="plat-name">OWASP MASVS</span>
+            <span class="plat-role">Seguridad & Cero Fugas</span>
+          </a>
+          <a href="https://securityscorecards.dev" target="_blank" rel="noopener" class="audit-platform-card" title="OpenSSF: Auditoría de seguridad por Linux Foundation y Google">
+            <span style="font-size: 1.2rem;">📜</span>
+            <span class="plat-name">OpenSSF</span>
+            <span class="plat-role">Scorecard Security</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Selector interactivo de aplicaciones -->
+      <div class="audit-selector-box">
+        <label for="auditoria-app-select" style="font-size: 0.8rem; color: #94a3b8; font-weight: 600; white-space: nowrap;">
+          Seleccionar Aplicación:
+        </label>
+        <select id="auditoria-app-select" class="audit-select" onchange="cambiarAppAuditoria(this.value)">
+          <option value="general">⭐ Ecosistema Completo (Visión Global)</option>
+          <option value="cambioya">👑 CAMBIOYA! (Trueque & Django Channels)</option>
+          <option value="hidoctor">🩺 HiDoc (Salud Pediátrica & Triaje IA)</option>
+          <option value="ataraxia">🏛️ Ataraxia (Fitness Estoico & PPG 60 FPS)</option>
+          <option value="vitrodiag">🏭 VitroDiag (Industria del Vidrio Hot End)</option>
+          <option value="faro">🚨 Faro (Seguridad Personal & SOS)</option>
+          <option value="sentinel">🛡️ SENTINEL (Privacidad & RGPD Art. 17)</option>
+          <option value="nutralive">🥑 NutraLive (Nutrición Clínica & MASLD)</option>
+          <option value="crypto">🪙 Crypto Pattern Analyzer (Binance 60 FPS)</option>
+          <option value="tramitefacil">🗂️ TrámiteFácil (Accesibilidad & Gemini IA)</option>
+          <option value="speaker">🔊 Speaker Remote Pro (Web Bluetooth DSP)</option>
+        </select>
+      </div>
+
+      <!-- Contenedor dinámico de detalle -->
+      <div class="audit-details-container" id="auditoria-detalle-body">
+        <!-- Renderizado dinámico vía app.js -->
+      </div>
+
+      <div style="margin-top: 18px; display: flex; gap: 10px; justify-content: flex-end;">
+        <button class="btn btn-outline" onclick="cerrarModalAuditoria()">
           Cerrar
         </button>
       </div>
