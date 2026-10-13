@@ -91,6 +91,7 @@ window.addEventListener('click', (e) => {
   const modalVentaHiDoctor = document.getElementById('modal-venta-hidoctor');
   const modalSimulador = document.getElementById('modal-simulador');
   const modalRadar = document.getElementById('modal-radar');
+  const modalDevInfo = document.getElementById('modal-dev-info');
   if (e.target === modalDonacion) {
     cerrarModalDonacion();
   }
@@ -103,6 +104,9 @@ window.addEventListener('click', (e) => {
   if (e.target === modalRadar) {
     cerrarModalRadar();
   }
+  if (e.target === modalDevInfo) {
+    cerrarModalDevInfo();
+  }
 });
 
 // Cerrar con Escape
@@ -112,6 +116,7 @@ window.addEventListener('keydown', (e) => {
     cerrarModalVentaHiDoctor();
     cerrarSimulador();
     cerrarModalRadar();
+    cerrarModalDevInfo();
   }
 });
 
@@ -456,4 +461,105 @@ function actualizarPingTelemetria(mostrarAlerta = false) {
     mostrarToast('✅ Telemetría auditada: 10/10 apps operativas con latencia óptima.');
   }
 }
+
+/* ===================================================================
+   MODAL DE INFORMACIÓN TÉCNICA: APPS EN DESARROLLO (KINTSUGI & LUCHITO)
+   =================================================================== */
+
+const DEV_APPS_INFO = {
+  kintsugi: {
+    kicker: '🏛️ PROTOCOLO ZERO-KNOWLEDGE • MENTOR CLÍNICO PSICOLÓGICO',
+    title: 'KINTSUGI — Mentor Clínico & Bastión Local-First',
+    sub: 'Acompañamiento clínico, psiquiátrico y recuperación de adicciones con privacidad matemática inviolable.',
+    content: `
+      <div style="background: rgba(168, 85, 247, 0.08); border: 1px solid rgba(168, 85, 247, 0.3); border-radius: 8px; padding: 12px 14px; margin-bottom: 16px; font-size: 0.85rem; color: #d8b4fe;">
+        🏺 <em>"Inspirada en el arte tradicional japonés de reparar con oro puro: las fracturas no se esconden, se honran como símbolo de resiliencia y fortaleza."</em>
+      </div>
+      <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 14px;">
+        Kintsugi resuelve el mayor dilema de la salud mental digital: <strong>la confidencialidad</strong>. Los pacientes de adicciones y depresión mayor temen que sus diarios y recaídas queden en bases de datos corporativas. En Kintsugi, los datos se cifran con claves derivadas en el propio dispositivo y nunca tocan un servidor externo.
+      </p>
+      <div class="dev-spec-grid">
+        <div class="dev-spec-item">
+          <strong>🔐 Cifrado Militar en Cliente</strong>
+          <span>AES-256-GCM + PBKDF2 (100.000 iteraciones). Vector IV de 96 bits único por transacción. Cero almacenamiento externo.</span>
+        </div>
+        <div class="dev-spec-item">
+          <strong>🌙 Santuario Nocturno 3:00 AM</strong>
+          <span>Generador de Ruido Marrón Somático en tiempo real con Web Audio API para disolver rumiación y angustia del lóbulo frontal.</span>
+        </div>
+        <div class="dev-spec-item">
+          <strong>🚨 Escudo Táctico de Urgencia</strong>
+          <span>Temporizador de 15 min de Urge Surfing (Alan Marlatt), Protocolo DBT TIPP (hielo / respiración 4-7-8) y Plan Stanley-Brown.</span>
+        </div>
+        <div class="dev-spec-item">
+          <strong>🧠 Espejo Profundo Integrativo</strong>
+          <span>Modelos clínicos de Freud, Carl Jung (Integración de la Sombra), Viktor Frankl, IFS (Sistemas de Familia Interna) y Teoría Polivagal.</span>
+        </div>
+      </div>
+      <div style="font-size: 0.8rem; color: var(--text-muted); line-height: 1.5; border-top: 1px solid var(--border-subtle); padding-top: 12px;">
+        ⚠️ <strong>Marco Ético & SaMD Shield:</strong> No prescribe fármacos ni emite diagnósticos médicos cerrados. Integra directorio de crisis 24/7 para 6 países (*4141 Chile, 024 España, 988 EE.UU.).
+      </div>
+    `
+  },
+  luchito: {
+    kicker: '🧭 TECNOLOGÍA ASISTIVA DE PRECISIÓN • COMPUTER VISION MULTIMODAL',
+    title: 'LUCHITO — Lazarillo Espacial Asistivo',
+    sub: 'Independencia situacional y seguridad física para personas con ceguera o baja visión severa.',
+    content: `
+      <div class="tribute-box" style="margin-bottom: 16px;">
+        🕯️ <em>"DEDICATORIA PERMANENTE: En memoria a Luis Alfredo Fernández Andrade. Tu luz sigue guiando nuestros pasos con dignidad, amor e independencia."</em>
+      </div>
+      <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 14px;">
+        LUCHITO rompe con las apps asistivas convencionales que saturan de poesía o alucinan descripciones. Diseñada bajo un estándar táctico militar de <strong>cero tolerancia al error</strong>, actúa como un lazarillo de bolsillo que detecta riesgos físicos en fracciones de segundo y los comunica con precisión auditiva.
+      </p>
+      <div class="dev-spec-grid">
+        <div class="dev-spec-item">
+          <strong>🛑 Freno Inmediato "¡ALTO!"</strong>
+          <span>Detección de escaleras descendentes, fosos, zanjas o ramas a la altura de la cara con vibración severa y voz tajante.</span>
+        </div>
+        <div class="dev-spec-item">
+          <strong>🔦 Sensor Fotométrico Auto-Torch</strong>
+          <span>Cálculo de luminancia perceptual en Canvas (&lt;20 ms). Avisa por voz y enciende la linterna del teléfono en penumbra.</span>
+        </div>
+        <div class="dev-spec-item">
+          <strong>🎙️ Activación por Voz y Toque Universal</strong>
+          <span>Escucha la palabra clave "Luchito" o reacciona al toque de pantalla completa. Cero formularios de registro ni barreras.</span>
+        </div>
+        <div class="dev-spec-item">
+          <strong>⏰ Orientación en Posiciones Horarias</strong>
+          <span>Comunica el entorno en clave de reloj (las 12 al frente, las 3 a la derecha) con distancias relativas estimadas.</span>
+        </div>
+      </div>
+      <div style="font-size: 0.8rem; color: var(--text-muted); line-height: 1.5; border-top: 1px solid var(--border-subtle); padding-top: 12px;">
+        👁️ <strong>Accesibilidad de Extremo a Extremo:</strong> Contraste extremo WCAG AAA sobre negro OLED puro (#000000) y acentos ámbar (#F59E0B). Botón SOS con envío de coordenadas GPS por WhatsApp.
+      </div>
+    `
+  }
+};
+
+function abrirModalDevInfo(appId) {
+  const modal = document.getElementById('modal-dev-info');
+  const kicker = document.getElementById('dev-modal-kicker');
+  const title = document.getElementById('dev-modal-title');
+  const sub = document.getElementById('dev-modal-sub');
+  const body = document.getElementById('dev-modal-body');
+
+  const info = DEV_APPS_INFO[appId];
+  if (!info || !modal) return;
+
+  if (kicker) kicker.textContent = info.kicker;
+  if (title) title.textContent = info.title;
+  if (sub) sub.textContent = info.sub;
+  if (body) body.innerHTML = info.content;
+
+  modal.style.display = 'flex';
+  document.body.style.overflow = 'hidden';
+}
+
+function cerrarModalDevInfo() {
+  const modal = document.getElementById('modal-dev-info');
+  if (modal) modal.style.display = 'none';
+  document.body.style.overflow = 'auto';
+}
+
 
