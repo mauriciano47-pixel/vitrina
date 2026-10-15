@@ -1821,7 +1821,8 @@ a.audit-chip:hover {
 }
 
 .hero-audit-seal-img {
-  max-width: 260px;
+  width: 100%;
+  max-width: 360px;
   height: auto;
   display: block;
 }

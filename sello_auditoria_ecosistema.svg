@@ -1,47 +1,57 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 70" width="240" height="70" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 76" width="380" height="76" fill="none">
   <defs>
     <linearGradient id="sealBorder" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#10B981"/>
       <stop offset="50%" stop-color="#38BDF8"/>
-      <stop offset="100%" stop-color="#D4AF37"/>
+      <stop offset="100%" stop-color="#F59E0B"/>
     </linearGradient>
     <linearGradient id="sealBg" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#0F172A"/>
-      <stop offset="100%" stop-color="#050811"/>
+      <stop offset="100%" stop-color="#070D18"/>
+    </linearGradient>
+    <linearGradient id="shieldFill" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="rgba(16, 185, 129, 0.22)"/>
+      <stop offset="100%" stop-color="rgba(2, 132, 199, 0.12)"/>
     </linearGradient>
     <filter id="sealShadow" x="-10%" y="-10%" width="120%" height="130%">
       <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#10B981" flood-opacity="0.25"/>
     </filter>
   </defs>
 
-  <!-- Container Box with Rounded Chamfers -->
-  <rect x="2" y="2" width="236" height="66" rx="10" fill="url(#sealBg)" stroke="url(#sealBorder)" stroke-width="1.8" filter="url(#sealShadow)"/>
+  <!-- Contenedor Principal con Bordes Redondeados y Glow -->
+  <rect x="2" y="2" width="376" height="72" rx="12" fill="url(#sealBg)" stroke="url(#sealBorder)" stroke-width="1.6" filter="url(#sealShadow)"/>
 
-  <!-- Left Shield Icon -->
-  <g transform="translate(14, 13)">
-    <!-- Outer Shield -->
-    <path d="M22 2 L40 8 V20 C40 31 32 39 22 42 C12 39 4 31 4 20 V8 Z" fill="rgba(16, 185, 129, 0.15)" stroke="#10B981" stroke-width="1.8"/>
-    <!-- Inner Checkmark -->
-    <path d="M14 20 L20 26 L30 14" stroke="#34D399" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
-    <!-- Sonar Wave Accent -->
-    <path d="M24 6 A 14 14 0 0 1 36 18" stroke="#38BDF8" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- Escudo Táctico de Verificación (Izquierda) -->
+  <g transform="translate(18, 14)">
+    <!-- Silueta del Escudo -->
+    <path d="M22 2 L42 8 V22 C42 34 33 43 22 47 C11 43 2 34 2 22 V8 Z" fill="url(#shieldFill)" stroke="#10B981" stroke-width="1.8"/>
+    <!-- Checkmark de Aprobación -->
+    <path d="M14 23 L20 29 L31 16" stroke="#34D399" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- Arco de Onda Sonar -->
+    <path d="M24 6 A 14 14 0 0 1 36 18" stroke="#38BDF8" stroke-width="1.6" stroke-linecap="round"/>
   </g>
 
-  <!-- Central Text Information -->
-  <text x="64" y="22" font-family="'Space Grotesk', system-ui, -apple-system, sans-serif" font-size="9" font-weight="800" fill="#38BDF8" letter-spacing="1">
+  <!-- Información Tipográfica Central (Espaciada y Desacoplada) -->
+  <!-- Kicker Superior -->
+  <text x="74" y="24" font-family="'Space Grotesk', system-ui, -apple-system, sans-serif" font-size="9" font-weight="800" fill="#38BDF8" letter-spacing="1">
     AUDITORÍA DE CÓDIGO VERIFICADA
   </text>
-  <text x="64" y="38" font-family="'Space Grotesk', system-ui, -apple-system, sans-serif" font-size="13" font-weight="900" fill="#FFFFFF" letter-spacing="0.3">
-    SonarCloud &amp; Snyk
+  <!-- Título Principal de Plataformas -->
+  <text x="74" y="43" font-family="'Space Grotesk', system-ui, -apple-system, sans-serif" font-size="14.5" font-weight="900" fill="#FFFFFF" letter-spacing="0.2">
+    SonarCloud &amp; Snyk Shield
   </text>
-  <text x="64" y="52" font-family="monospace, monospace" font-size="9.5" font-weight="700" fill="#10B981">
+  <!-- Subtítulo de Calidad y Métrica -->
+  <text x="74" y="59" font-family="'Space Grotesk', monospace, sans-serif" font-size="9.5" font-weight="700" fill="#10B981" letter-spacing="0.3">
     QUALITY GATE PASSED • 0 VULNS
   </text>
 
-  <!-- Right Grade Badge -->
-  <g transform="translate(196, 14)">
-    <rect x="0" y="0" width="30" height="42" rx="6" fill="rgba(16, 185, 129, 0.2)" stroke="#10B981" stroke-width="1.2"/>
-    <text x="15" y="22" font-family="'Space Grotesk', system-ui, sans-serif" font-size="16" font-weight="900" fill="#34D399" text-anchor="middle">A</text>
-    <text x="15" y="34" font-family="monospace" font-size="7" font-weight="800" fill="#94A3B8" text-anchor="middle">CALIDAD</text>
+  <!-- Línea Divisoria Sutil -->
+  <line x1="298" y1="16" x2="298" y2="60" stroke="rgba(255, 255, 255, 0.1)" stroke-width="1"/>
+
+  <!-- Placa de Grado de Calidad (Derecha, con Aire Generoso) -->
+  <g transform="translate(312, 14)">
+    <rect x="0" y="0" width="48" height="48" rx="8" fill="rgba(16, 185, 129, 0.16)" stroke="#10B981" stroke-width="1.3"/>
+    <text x="24" y="29" font-family="'Space Grotesk', system-ui, sans-serif" font-size="21" font-weight="900" fill="#34D399" text-anchor="middle">A</text>
+    <text x="24" y="41" font-family="'Space Grotesk', monospace, sans-serif" font-size="7.5" font-weight="800" fill="#94A3B8" text-anchor="middle" letter-spacing="0.5">GRADO A</text>
   </g>
 </svg>
