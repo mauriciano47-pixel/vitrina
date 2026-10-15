@@ -293,7 +293,7 @@ const FLOTA_APPS = [
   { id: 'crypto', name: 'Crypto Pattern Analyzer', host: 'GitHub Pages WebSocket', url: 'https://mauriciano47-pixel.github.io/crypto-analyzer/', category: 'Binance Streaming 60 FPS' },
   { id: 'tramitefacil', name: 'TrámiteFácil', host: 'GitHub Pages PWA', url: 'https://mauriciano47-pixel.github.io/tramite-facil/', category: 'Accesibilidad & Gemini IA' },
   { id: 'sentinel', name: 'SENTINEL', host: 'Railway Node.js', url: 'https://sentinel-app.up.railway.app', category: 'Ciberseguridad & RGPD 17' },
-  { id: 'speaker', name: 'Speaker Remote Pro', host: 'GitHub Pages Web Bluetooth', url: 'https://mauriciano47-pixel.github.io/Speaker_remote/', category: 'Hardware Audio DSP' }
+  { id: 'speaker', name: 'PartySync Pro', host: 'GitHub Pages P2P Mesh', url: 'https://mauriciano47-pixel.github.io/Speaker_remote/', category: 'Cluster Multi-Parlante P2P & DSP' }
 ];
 
 /**
@@ -758,20 +758,20 @@ const AUDITORIA_DATA = {
     repoUrl: 'https://github.com/mauriciano47-pixel/tramite-facil'
   },
   speaker: {
-    title: 'Speaker Remote Pro',
-    category: 'Control Maestro de Audio Bluetooth & Ecualizador DSP',
-    version: 'v1.0.0 • Web Bluetooth API',
+    title: 'PartySync Pro (by Speaker Remote)',
+    category: 'Cluster Multi-Parlante P2P & Compensación Acústica DSP',
+    version: 'v2.0.0 MESH • WebRTC & Web Audio API',
     kpis: [
-      { num: 'Passed', label: 'Sonar Quality Gate', color: 'green' },
-      { num: '0', label: 'Dependencias Externas', color: 'green' },
-      { num: 'Web BT', label: 'Estándar W3C', color: 'cyan' },
-      { num: '100% PWA', label: 'Sin Instalador', color: 'gold' }
+      { num: 'P2P Mesh', label: 'Arquitectura Descentralizada', color: 'cyan' },
+      { num: '0-400 ms', label: 'DelayNode Acústico', color: 'green' },
+      { num: 'L / R', label: 'Escenario Estéreo', color: 'cyan' },
+      { num: '100% PWA', label: 'Sin App Privativa', color: 'gold' }
     ],
-    summary: 'Controlador de hardware mediante estándares abiertos de la W3C. Elimina la necesidad de software privativo con telemetría de fabricantes.',
+    summary: 'Sistema de audio distribuido P2P que convierte múltiples teléfonos y parlantes Bluetooth de cualquier marca (Screamer 3, JBL, Sony, Bose) en un clúster estéreo sincronizado mediante WebRTC DataChannels y Web Audio API sin cables ni software privativo.',
     checks: [
-      'Permisos Explícitos W3C: Acceso Bluetooth bajo demanda estricta del usuario conforme a especificaciones de seguridad de Chromium.',
-      'Web Audio API: Procesamiento de señales digitales en hilo de audio sin latencia perceptible.',
-      'Cero Permisos Invasivos: No accede a libreta de contactos, ubicación ni almacenamiento del dispositivo.'
+      'Compensación Milimétrica de Fase: DelayNode de Web Audio API para calibrar retardo acústico y latencia Bluetooth (0 a 400 ms).',
+      'P2P DataChannel Mesh: Orquestación distribuida para emisión simultánea sin saturar servidores externos de streaming.',
+      'Estéreo Espacial L/R: Asignación dinámica de canales estéreo y síntesis procedural de audio sin telemetría invasiva.'
     ],
     repoUrl: 'https://github.com/mauriciano47-pixel/Speaker_remote'
   }
