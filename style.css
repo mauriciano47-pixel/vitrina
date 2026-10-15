@@ -1693,6 +1693,19 @@ body {
   letter-spacing: 0.2px;
 }
 
+a.audit-chip {
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+a.audit-chip:hover {
+  background: rgba(16, 185, 129, 0.15);
+  border-color: rgba(16, 185, 129, 0.5);
+  transform: translateY(-1px);
+  color: #fff;
+}
+
 .audit-chip strong {
   color: #fff;
   font-weight: 700;

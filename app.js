@@ -615,6 +615,8 @@ const AUDITORIA_DATA = {
     title: 'HiDoctor (HiDoc)',
     category: 'Bitácora Clínica Pediátrica Inteligente con Triaje por IA',
     version: 'v2.3.0 • B2B Marca Blanca & PWA',
+    sonarUrl: 'https://sonarcloud.io/summary/overall?id=mauriciano47-pixel_hi-doctor',
+    sonarBadgeUrl: 'https://sonarcloud.io/api/project_badges/measure?project=mauriciano47-pixel_hi-doctor&metric=alert_status',
     kpis: [
       { num: 'Passed', label: 'Sonar Quality Gate', color: 'green' },
       { num: '0', label: 'Fugas de Datos', color: 'green' },
@@ -634,6 +636,8 @@ const AUDITORIA_DATA = {
     title: 'Ataraxia — Coach Estoico',
     category: 'Fitness, Nutrición & Rendimiento Estoico (Android Nativo EAS)',
     version: 'v1.2.3 • 60 FPS Ultra Fluid',
+    sonarUrl: 'https://sonarcloud.io/summary/overall?id=mauriciano47-pixel_ataraxia',
+    sonarBadgeUrl: 'https://sonarcloud.io/api/project_badges/measure?project=mauriciano47-pixel_ataraxia&metric=alert_status',
     kpis: [
       { num: 'Passed', label: 'Sonar Quality Gate', color: 'green' },
       { num: '0', label: 'Vulns en Binario', color: 'green' },
@@ -647,7 +651,7 @@ const AUDITORIA_DATA = {
       'Podómetro Biomecánico NEAT 24/7: Filtro heurístico anti-vehículo con cancelación de ruido de acelerómetro.',
       'Cero Bloqueo de Hilo Principal: Métricas calculadas con requestAnimationFrame a 60 cuadros estables por segundo.'
     ],
-    repoUrl: 'https://github.com/mauriciano47-pixel'
+    repoUrl: 'https://github.com/mauriciano47-pixel/ataraxia'
   },
   vitrodiag: {
     title: 'VitroDiag — Operador IS',
@@ -707,6 +711,8 @@ const AUDITORIA_DATA = {
     title: 'NutraLive',
     category: 'Nutrición Clínica de Precisión, Escudo Hepático & MASLD',
     version: 'v1.1.0 • Cloudflare Pages PWA',
+    sonarUrl: 'https://sonarcloud.io/summary/overall?id=mauriciano47-pixel_nutralive',
+    sonarBadgeUrl: 'https://sonarcloud.io/api/project_badges/measure?project=mauriciano47-pixel_nutralive&metric=alert_status',
     kpis: [
       { num: 'Passed', label: 'Sonar Quality Gate', color: 'green' },
       { num: '0', label: 'Vulnerabilidades XSS', color: 'green' },
@@ -828,9 +834,16 @@ function renderizarDetalleAuditoria(appId) {
         <h4 style="font-size: 1.15rem; color: #fff; margin-bottom: 2px;">${data.title}</h4>
         <span style="font-size: 0.78rem; color: var(--cyan-glow);">${data.category}</span>
       </div>
-      <span class="audit-chip" style="background: rgba(16, 185, 129, 0.15); border-color: rgba(16, 185, 129, 0.4); color: #34d399;">
-        ${data.version}
-      </span>
+      <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
+        ${data.sonarBadgeUrl ? `
+          <a href="${data.sonarUrl}" target="_blank" rel="noopener" title="Auditoría oficial en SonarCloud: Quality Gate Passed">
+            <img src="${data.sonarBadgeUrl}" alt="SonarCloud Quality Gate" height="20" style="vertical-align: middle; border-radius: 3px;" />
+          </a>
+        ` : ''}
+        <span class="audit-chip" style="background: rgba(16, 185, 129, 0.15); border-color: rgba(16, 185, 129, 0.4); color: #34d399;">
+          ${data.version}
+        </span>
+      </div>
     </div>
 
     <p style="font-size: 0.84rem; color: var(--text-secondary); line-height: 1.5; margin-bottom: 16px;">
@@ -854,7 +867,10 @@ function renderizarDetalleAuditoria(appId) {
       <span style="font-size: 0.72rem; color: var(--text-muted);">
         Estándares evaluados: SonarQube SAST • Snyk SCA • OWASP Top 10 • Clean Code
       </span>
-      ${data.repoUrl ? `<a href="${data.repoUrl}" target="_blank" rel="noopener" class="btn btn-sm btn-outline" style="font-size: 0.75rem; padding: 4px 10px;">💻 Ver Repositorio en GitHub ↗</a>` : ''}
+      <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+        ${data.sonarUrl ? `<a href="${data.sonarUrl}" target="_blank" rel="noopener" class="btn btn-sm btn-primary" style="font-size: 0.75rem; padding: 4px 10px; background: #00aa00; border-color: #00aa00; color: #fff; text-decoration: none;">🛡️ Ver Reporte SonarCloud ↗</a>` : ''}
+        ${data.repoUrl ? `<a href="${data.repoUrl}" target="_blank" rel="noopener" class="btn btn-sm btn-outline" style="font-size: 0.75rem; padding: 4px 10px; text-decoration: none;">💻 Ver Repositorio en GitHub ↗</a>` : ''}
+      </div>
     </div>
   `;
 }
