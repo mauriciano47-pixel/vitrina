@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48" fill="none">
+  <!-- OpenSSF Hexagon Shield -->
+  <polygon points="24,4 42,14 42,34 24,44 6,34 6,14" fill="rgba(16, 185, 129, 0.12)" stroke="#10B981" stroke-width="2.5"/>
+  <!-- Open Source Flower / Star branches -->
+  <circle cx="24" cy="24" r="5" fill="#34D399"/>
+  <circle cx="24" cy="14" r="3" fill="#38BDF8"/>
+  <circle cx="33" cy="19" r="3" fill="#38BDF8"/>
+  <circle cx="33" cy="29" r="3" fill="#38BDF8"/>
+  <circle cx="24" cy="34" r="3" fill="#38BDF8"/>
+  <circle cx="15" cy="29" r="3" fill="#38BDF8"/>
+  <circle cx="15" cy="19" r="3" fill="#38BDF8"/>
+  <line x1="24" y1="19" x2="24" y2="14" stroke="#38BDF8" stroke-width="1.8"/>
+  <line x1="27.5" y1="21.5" x2="33" y2="19" stroke="#38BDF8" stroke-width="1.8"/>
+  <line x1="27.5" y1="26.5" x2="33" y2="29" stroke="#38BDF8" stroke-width="1.8"/>
+  <line x1="24" y1="29" x2="24" y2="34" stroke="#38BDF8" stroke-width="1.8"/>
+  <line x1="20.5" y1="26.5" x2="15" y2="29" stroke="#38BDF8" stroke-width="1.8"/>
+  <line x1="20.5" y1="21.5" x2="15" y2="19" stroke="#38BDF8" stroke-width="1.8"/>
+</svg>

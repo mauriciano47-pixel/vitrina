@@ -1779,6 +1779,53 @@ a.audit-chip:hover {
   background: rgba(56, 189, 248, 0.08);
 }
 
+/* Logotipos vectoriales en chips de auditoría */
+.audit-chip-logo {
+  width: 13px;
+  height: 13px;
+  object-fit: contain;
+  vertical-align: middle;
+  flex-shrink: 0;
+}
+
+.audit-platform-logo {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  margin-bottom: 6px;
+  transition: transform 0.25s ease;
+}
+
+.audit-platform-card:hover .audit-platform-logo {
+  transform: scale(1.15);
+}
+
+/* Sello Oficial de Auditoría Institucional en Hero */
+.hero-audit-seal-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 18px 0 20px 0;
+}
+
+.hero-audit-seal-link {
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.25s ease, filter 0.25s ease;
+}
+
+.hero-audit-seal-link:hover {
+  transform: translateY(-2px) scale(1.02);
+  filter: drop-shadow(0 0 16px rgba(16, 185, 129, 0.45));
+}
+
+.hero-audit-seal-img {
+  max-width: 260px;
+  height: auto;
+  display: block;
+}
+
 .audit-platform-card .plat-name {
   font-size: 0.82rem;
   font-weight: 700;

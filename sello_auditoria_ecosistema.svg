@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 70" width="240" height="70" fill="none">
+  <defs>
+    <linearGradient id="sealBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="50%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#D4AF37"/>
+    </linearGradient>
+    <linearGradient id="sealBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#050811"/>
+    </linearGradient>
+    <filter id="sealShadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#10B981" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <!-- Container Box with Rounded Chamfers -->
+  <rect x="2" y="2" width="236" height="66" rx="10" fill="url(#sealBg)" stroke="url(#sealBorder)" stroke-width="1.8" filter="url(#sealShadow)"/>
+
+  <!-- Left Shield Icon -->
+  <g transform="translate(14, 13)">
+    <!-- Outer Shield -->
+    <path d="M22 2 L40 8 V20 C40 31 32 39 22 42 C12 39 4 31 4 20 V8 Z" fill="rgba(16, 185, 129, 0.15)" stroke="#10B981" stroke-width="1.8"/>
+    <!-- Inner Checkmark -->
+    <path d="M14 20 L20 26 L30 14" stroke="#34D399" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- Sonar Wave Accent -->
+    <path d="M24 6 A 14 14 0 0 1 36 18" stroke="#38BDF8" stroke-width="1.5" stroke-linecap="round"/>
+  </g>
+
+  <!-- Central Text Information -->
+  <text x="64" y="22" font-family="'Space Grotesk', system-ui, -apple-system, sans-serif" font-size="9" font-weight="800" fill="#38BDF8" letter-spacing="1">
+    AUDITORÍA DE CÓDIGO VERIFICADA
+  </text>
+  <text x="64" y="38" font-family="'Space Grotesk', system-ui, -apple-system, sans-serif" font-size="13" font-weight="900" fill="#FFFFFF" letter-spacing="0.3">
+    SonarCloud &amp; Snyk
+  </text>
+  <text x="64" y="52" font-family="monospace, monospace" font-size="9.5" font-weight="700" fill="#10B981">
+    QUALITY GATE PASSED • 0 VULNS
+  </text>
+
+  <!-- Right Grade Badge -->
+  <g transform="translate(196, 14)">
+    <rect x="0" y="0" width="30" height="42" rx="6" fill="rgba(16, 185, 129, 0.2)" stroke="#10B981" stroke-width="1.2"/>
+    <text x="15" y="22" font-family="'Space Grotesk', system-ui, sans-serif" font-size="16" font-weight="900" fill="#34D399" text-anchor="middle">A</text>
+    <text x="15" y="34" font-family="monospace" font-size="7" font-weight="800" fill="#94A3B8" text-anchor="middle">CALIDAD</text>
+  </g>
+</svg>

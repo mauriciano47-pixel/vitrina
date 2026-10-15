@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48" fill="none">
+  <defs>
+    <linearGradient id="snykPurple" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7C3AED"/>
+      <stop offset="50%" stop-color="#4C549F"/>
+      <stop offset="100%" stop-color="#312E81"/>
+    </linearGradient>
+    <linearGradient id="snykShield" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#A78BFA"/>
+      <stop offset="100%" stop-color="#6366F1"/>
+    </linearGradient>
+  </defs>
+  <!-- Background Shield -->
+  <path d="M24 4 L40 10 V23 C40 33 33 41.5 24 44 C15 41.5 8 33 8 23 V10 Z" fill="url(#snykPurple)" stroke="url(#snykShield)" stroke-width="2"/>
+  <!-- Stylized Snyk Dog Silhouette / Patch -->
+  <path d="M19 15 L22 19 L26 19 L29 15 L32 20 L30 25 L32 28 L28 32 L24 35 L20 32 L16 28 L18 25 L16 20 Z" fill="#FFFFFF"/>
+  <circle cx="21" cy="22" r="1.5" fill="#1E1B4B"/>
+  <circle cx="27" cy="22" r="1.5" fill="#1E1B4B"/>
+  <path d="M22 28 Q24 30 26 28" stroke="#1E1B4B" stroke-width="1.8" stroke-linecap="round"/>
+</svg>

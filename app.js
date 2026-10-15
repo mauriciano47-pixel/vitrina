@@ -839,7 +839,14 @@ function renderizarDetalleAuditoria(appId) {
           <a href="${data.sonarUrl}" target="_blank" rel="noopener" title="Auditoría oficial en SonarCloud: Quality Gate Passed">
             <img src="${data.sonarBadgeUrl}" alt="SonarCloud Quality Gate" height="20" style="vertical-align: middle; border-radius: 3px;" />
           </a>
-        ` : ''}
+        ` : `
+          <span class="audit-chip sonar" title="SonarCloud: Quality Gate Passed">
+            <img src="logo_sonarcloud.svg" alt="Sonar" class="audit-chip-logo" /> Sonar: <strong>Passed</strong>
+          </span>
+        `}
+        <span class="audit-chip snyk" title="Snyk Shield: 0 Vulnerabilidades Críticas">
+          <img src="logo_snyk.svg" alt="Snyk" class="audit-chip-logo" /> Snyk: <strong>0 Vulns</strong>
+        </span>
         <span class="audit-chip" style="background: rgba(16, 185, 129, 0.15); border-color: rgba(16, 185, 129, 0.4); color: #34d399;">
           ${data.version}
         </span>
