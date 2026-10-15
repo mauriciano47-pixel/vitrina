@@ -228,10 +228,36 @@
         <strong>100% funcionales en producción</strong>, listas para probar online, descargar o respaldar como inversor.
       </p>
 
-      <!-- Sello Oficial de Auditoría Institucional -->
+      <!-- Sello Oficial de Auditoría Institucional (Componente Flexbox 100% Desacoplado y Ordenado) -->
       <div class="hero-audit-seal-wrapper">
-        <a href="javascript:void(0)" onclick="abrirModalAuditoria('general')" class="hero-audit-seal-link" title="Explorar Certificación y Auditoría Externa de Código (SonarCloud &amp; Snyk)">
-          <img src="sello_auditoria_ecosistema.svg" alt="Sello de Auditoría SonarCloud &amp; Snyk" class="hero-audit-seal-img" width="360" height="72" />
+        <a href="javascript:void(0)" onclick="abrirModalAuditoria('general')" class="hero-audit-seal-btn" title="Explorar Certificación y Auditoría Externa de Código (SonarCloud &amp; Snyk)">
+          <!-- Icono Escudo Táctico -->
+          <div class="seal-icon-box">
+            <svg viewBox="0 0 44 48" width="34" height="38" fill="none" class="seal-svg-shield" aria-hidden="true">
+              <path d="M22 2 L42 8 V22 C42 34 33 43 22 47 C11 43 2 34 2 22 V8 Z" fill="rgba(16, 185, 129, 0.22)" stroke="#10B981" stroke-width="2"/>
+              <path d="M14 23 L20 29 L31 16" stroke="#34D399" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M24 6 A 14 14 0 0 1 36 18" stroke="#38BDF8" stroke-width="1.8" stroke-linecap="round"/>
+            </svg>
+          </div>
+
+          <!-- Bloque Tipográfico Central Ordenado -->
+          <div class="seal-text-block">
+            <span class="seal-kicker">AUDITORÍA DE CÓDIGO VERIFICADA</span>
+            <span class="seal-brand">SonarCloud &amp; Snyk Shield</span>
+            <span class="seal-metric">
+              <span class="seal-metric-dot"></span>
+              QUALITY GATE PASSED • 0 VULNS
+            </span>
+          </div>
+
+          <!-- Divisor Vertical de Seguridad -->
+          <div class="seal-divider" aria-hidden="true"></div>
+
+          <!-- Placa de Grado de Calidad Independiente -->
+          <div class="seal-grade-card" title="Calidad Certificada: Grado A">
+            <span class="seal-grade-letter">A</span>
+            <span class="seal-grade-label">GRADO A</span>
+          </div>
         </a>
       </div>
       

@@ -1800,31 +1800,152 @@ a.audit-chip:hover {
   transform: scale(1.15);
 }
 
-/* Sello Oficial de Auditoría Institucional en Hero */
+/* Sello Oficial de Auditoría Institucional en Hero (Componente HTML & CSS Flexbox Desacoplado) */
 .hero-audit-seal-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 18px 0 20px 0;
+  margin: 18px 0 22px 0;
 }
 
-.hero-audit-seal-link {
-  display: inline-block;
-  cursor: pointer;
+.hero-audit-seal-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.95), rgba(7, 13, 24, 0.98));
+  border: 1.5px solid rgba(56, 189, 248, 0.35);
+  border-radius: 12px;
+  padding: 10px 18px;
   text-decoration: none;
-  transition: transform 0.25s ease, filter 0.25s ease;
+  cursor: pointer;
+  box-shadow: 0 4px 20px rgba(16, 185, 129, 0.18), inset 0 0 12px rgba(56, 189, 248, 0.05);
+  transition: all 0.25s ease;
+  backdrop-filter: blur(10px);
+  max-width: 440px;
+  width: auto;
 }
 
-.hero-audit-seal-link:hover {
-  transform: translateY(-2px) scale(1.02);
-  filter: drop-shadow(0 0 16px rgba(16, 185, 129, 0.45));
+.hero-audit-seal-btn:hover {
+  transform: translateY(-2px);
+  border-color: rgba(52, 211, 153, 0.65);
+  box-shadow: 0 6px 24px rgba(16, 185, 129, 0.35), inset 0 0 16px rgba(56, 189, 248, 0.1);
 }
 
-.hero-audit-seal-img {
-  width: 100%;
-  max-width: 360px;
-  height: auto;
-  display: block;
+.seal-icon-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.seal-text-block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+  text-align: left;
+}
+
+.seal-kicker {
+  font-size: 0.68rem;
+  font-weight: 800;
+  color: #38bdf8;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  font-family: 'Space Grotesk', system-ui, sans-serif;
+  line-height: 1.2;
+}
+
+.seal-brand {
+  font-size: 1.05rem;
+  font-weight: 900;
+  color: #ffffff;
+  letter-spacing: 0.2px;
+  font-family: 'Space Grotesk', system-ui, sans-serif;
+  line-height: 1.25;
+}
+
+.seal-metric {
+  font-size: 0.74rem;
+  font-weight: 700;
+  color: #34d399;
+  letter-spacing: 0.3px;
+  font-family: monospace, monospace;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  line-height: 1.2;
+}
+
+.seal-metric-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #10b981;
+  box-shadow: 0 0 6px #10b981;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.seal-divider {
+  width: 1px;
+  height: 42px;
+  background: rgba(255, 255, 255, 0.12);
+  flex-shrink: 0;
+}
+
+.seal-grade-card {
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  background: rgba(16, 185, 129, 0.16);
+  border: 1.4px solid #10b981;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: inset 0 0 8px rgba(16, 185, 129, 0.2);
+}
+
+.seal-grade-letter {
+  font-size: 1.4rem;
+  font-weight: 900;
+  color: #34d399;
+  line-height: 1;
+  font-family: 'Space Grotesk', system-ui, sans-serif;
+}
+
+.seal-grade-label {
+  font-size: 0.55rem;
+  font-weight: 800;
+  color: #94a3b8;
+  letter-spacing: 0.5px;
+  font-family: 'Space Grotesk', monospace, sans-serif;
+  margin-top: 1px;
+}
+
+@media (max-width: 480px) {
+  .hero-audit-seal-btn {
+    gap: 10px;
+    padding: 8px 12px;
+  }
+  .seal-kicker {
+    font-size: 0.6rem;
+  }
+  .seal-brand {
+    font-size: 0.9rem;
+  }
+  .seal-metric {
+    font-size: 0.66rem;
+  }
+  .seal-grade-card {
+    width: 40px;
+    height: 40px;
+  }
+  .seal-grade-letter {
+    font-size: 1.15rem;
+  }
 }
 
 .audit-platform-card .plat-name {
