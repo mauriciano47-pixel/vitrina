@@ -172,13 +172,18 @@
         <img src="logo_vitrina.svg" alt="Logo Vitrina & Launchpad" class="nav-brand-img" width="32" height="32" />
         <span class="logo-text">MAURICIO URIBE <span class="logo-accent">| VITRINA & LAUNCHPAD</span></span>
       </a>
-      <nav class="nav-links">
-        <a href="#apps">Aplicaciones</a>
-        <a href="#desarrollo" style="color: #f59e0b; font-weight: 700;">🧪 En Desarrollo</a>
-        <a href="#inversores" class="link-highlight">Inversores & Pitch</a>
-        <button class="btn btn-sm btn-outline" onclick="abrirModalAuditoria('general')" aria-label="Abrir centro de auditoría técnica y calidad" style="border-color: rgba(56, 189, 248, 0.4); color: var(--cyan-glow);">🛡️ Auditoría</button>
-        <button class="btn btn-sm btn-outline" onclick="compartirVitrina()" aria-label="Compartir y difundir la Vitrina">🔗 Difundir</button>
-        <a href="#apoyo" class="btn btn-sm btn-outline" onclick="abrirModalDonacion('general')">☕ Apoyar</a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú de navegación" aria-expanded="false" onclick="toggleMenuMovil()">
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+      </button>
+      <nav class="nav-links" id="nav-links">
+        <a href="#apps" onclick="toggleMenuMovil(false)">Aplicaciones</a>
+        <a href="#desarrollo" onclick="toggleMenuMovil(false)" style="color: #f59e0b; font-weight: 700;">🧪 En Desarrollo</a>
+        <a href="#inversores" onclick="toggleMenuMovil(false)" class="link-highlight">Inversores & Pitch</a>
+        <button class="btn btn-sm btn-outline" onclick="toggleMenuMovil(false); abrirModalAuditoria('general');" aria-label="Abrir centro de auditoría técnica y calidad" style="border-color: rgba(56, 189, 248, 0.4); color: var(--cyan-glow);">🛡️ Auditoría</button>
+        <button class="btn btn-sm btn-outline" onclick="toggleMenuMovil(false); compartirVitrina();" aria-label="Compartir y difundir la Vitrina">🔗 Difundir</button>
+        <a href="#apoyo" class="btn btn-sm btn-outline" onclick="toggleMenuMovil(false); abrirModalDonacion('general');">☕ Apoyar</a>
       </nav>
     </div>
   </header>
@@ -217,7 +222,7 @@
     <div class="hero-glow"></div>
     <div class="container hero-content">
       <div class="hero-badge">
-        <span class="badge-dot"></span> Suite Oficial v1.9.2 • Auditoría SonarCloud &amp; Snyk PASSED • Sandbox en Vivo
+        <span class="badge-dot"></span> Suite Oficial v1.9.5 • Auditoría SonarCloud &amp; Snyk PASSED • Sandbox en Vivo
       </div>
       <h1 class="hero-title">
         Tecnología con Propósito: <br/>

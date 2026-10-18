@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
   inicializarFiltros();
   actualizarPingTelemetria(false);
   setInterval(actualizarRelojSimulador, 1000);
+  inicializarMenuMovil();
 });
 
 /**
@@ -122,8 +123,51 @@ window.addEventListener('keydown', (e) => {
     cerrarModalRadar();
     cerrarModalDevInfo();
     cerrarModalAuditoria();
+    toggleMenuMovil(false);
   }
 });
+
+/**
+ * Controlador de Menú Móvil Hamburguesa (v1.9.5)
+ */
+function toggleMenuMovil(forzarEstado) {
+  const navToggle = document.getElementById('nav-toggle');
+  const navLinks = document.getElementById('nav-links');
+  if (!navToggle || !navLinks) return;
+
+  const activo = forzarEstado !== undefined ? forzarEstado : !navLinks.classList.contains('active');
+
+  if (activo) {
+    navLinks.classList.add('active');
+    navToggle.classList.add('open');
+    navToggle.setAttribute('aria-expanded', 'true');
+    navToggle.setAttribute('aria-label', 'Cerrar menú de navegación');
+  } else {
+    navLinks.classList.remove('active');
+    navToggle.classList.remove('open');
+    navToggle.setAttribute('aria-expanded', 'false');
+    navToggle.setAttribute('aria-label', 'Abrir menú de navegación');
+  }
+}
+
+function inicializarMenuMovil() {
+  const navLinks = document.getElementById('nav-links');
+  if (navLinks) {
+    navLinks.querySelectorAll('a, button').forEach((elem) => {
+      elem.addEventListener('click', () => {
+        toggleMenuMovil(false);
+      });
+    });
+  }
+
+  // Cerrar menú al hacer clic fuera del navbar
+  document.addEventListener('click', (e) => {
+    const navbar = document.querySelector('.navbar');
+    if (navbar && !navbar.contains(e.target)) {
+      toggleMenuMovil(false);
+    }
+  });
+}
 
 /**
  * Alternar pestañas de pago (Nacional, Internacional y Cripto)
