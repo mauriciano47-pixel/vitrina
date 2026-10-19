@@ -1,0 +1,19 @@
+{
+  "name": "vitrina-launchpad",
+  "version": "1.9.9",
+  "description": "Showcase Oficial de Inversores, Demostración de Proyectos y Hub M&A del Ecosistema",
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/*.test.js"
+  },
+  "keywords": [
+    "showcase",
+    "investors",
+    "launchpad",
+    "due-diligence",
+    "telemetry",
+    "ecosystem"
+  ],
+  "author": "Mauricio Uribe Maldonado",
+  "license": "Proprietary"
+}
