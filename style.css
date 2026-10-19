@@ -36,6 +36,10 @@
   padding: 0;
 }
 
+img, svg, picture, video {
+  max-width: 100%;
+}
+
 html {
   scroll-behavior: smooth;
   font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
@@ -255,6 +259,7 @@ body {
   position: relative;
   padding: 80px 0 60px 0;
   text-align: center;
+  overflow: hidden;
 }
 
 .hero-content {
@@ -1385,11 +1390,12 @@ body {
   overflow: hidden;
   box-shadow: 0 30px 80px -10px rgba(0, 0, 0, 0.95), 0 0 0 1px rgba(255, 255, 255, 0.15);
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  max-width: 95vw;
 }
 
 /* Modo Móvil / iPhone 16 Pro */
 .device-chassis.mobile-mode {
-  width: 380px;
+  width: min(380px, 92vw);
   height: 720px;
   max-height: 85vh;
   border-radius: 46px;
@@ -1398,7 +1404,7 @@ body {
 
 /* Modo Tablet */
 .device-chassis.tablet-mode {
-  width: 650px;
+  width: min(650px, 95vw);
   height: 760px;
   max-height: 85vh;
   border-radius: 34px;
@@ -1407,7 +1413,7 @@ body {
 
 /* Modo Desktop */
 .device-chassis.desktop-mode {
-  width: 950px;
+  width: min(950px, 95vw);
   height: 680px;
   max-height: 85vh;
   border-radius: 18px;
