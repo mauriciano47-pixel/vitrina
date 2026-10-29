@@ -181,6 +181,7 @@
         <a href="#apps" onclick="toggleMenuMovil(false)">Aplicaciones</a>
         <a href="#desarrollo" onclick="toggleMenuMovil(false)" style="color: #f59e0b; font-weight: 700;">🧪 En Desarrollo</a>
         <a href="#inversores" onclick="toggleMenuMovil(false)" class="link-highlight">Inversores & Pitch</a>
+        <a href="https://mauriciano47-pixel.github.io/due-diligence-suite/" target="_blank" rel="noopener" class="btn btn-sm btn-outline" style="border-color: #f59e0b; color: #f59e0b; font-weight: 700; background: rgba(245, 158, 11, 0.08);">💎 M&A Deal Desk</a>
         <button class="btn btn-sm btn-outline" onclick="toggleMenuMovil(false); abrirModalAuditoria('general');" aria-label="Abrir centro de auditoría técnica y calidad" style="border-color: rgba(56, 189, 248, 0.4); color: var(--cyan-glow);">🛡️ Auditoría</button>
         <button class="btn btn-sm btn-outline" onclick="toggleMenuMovil(false); compartirVitrina();" aria-label="Compartir y difundir la Vitrina">🔗 Difundir</button>
         <a href="#apoyo" class="btn btn-sm btn-outline" onclick="toggleMenuMovil(false); abrirModalDonacion('general');">☕ Apoyar</a>
@@ -1390,6 +1391,139 @@
         <p>❤️ ¡Muchas gracias por respaldar el software independiente y libre!</p>
       </div>
 
+    </div>
+  </div>
+
+
+  <!-- MODAL DE ADQUISICIÓN / VENTA DE CÓDIGO (ATARAXIA) -->
+  <div class="modal-backdrop" id="modal-venta-ataraxia" style="display: none;">
+    <div class="modal-card" style="max-width: 680px; max-height: 90vh; overflow-y: auto;">
+      <button class="modal-close" onclick="cerrarModalVentaAtaraxia()" aria-label="Cerrar modal de adquisición">✕</button>
+      
+      <div class="modal-header">
+        <span class="modal-kicker" style="color: #f59e0b;">💼 OPORTUNIDAD DE INVERSIÓN & ACTIVO FITTECH DE ALTO RENDIMIENTO</span>
+        <h3 class="modal-title" style="display: flex; align-items: center; gap: 10px; margin-top: 6px;">
+          <span>⚡</span> Ataraxia v2.9.9 — Adquisición & Licencia B2B
+        </h3>
+        <p class="modal-sub" style="margin-bottom: 16px;">
+          Coach de IA con autodisciplina estoica, podómetro biomecánico NEAT 24/7 y balance calórico continuo TDEE/BMR a 60 FPS. React Native (Expo 52) + Web PWA con Grado Institucional AAA (Score 96.7).
+        </p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; margin-bottom: 22px;">
+        <!-- Tarjeta 1: Buyout -->
+        <div style="background: linear-gradient(145deg, rgba(245, 158, 11, 0.08) 0%, rgba(15, 23, 42, 0.9) 100%); border: 2px solid rgba(245, 158, 11, 0.4); border-radius: var(--radius-lg); padding: 20px; position: relative;">
+          <div style="position: absolute; top: -11px; right: 14px; background: #f59e0b; color: #000; font-size: 0.7rem; font-weight: 800; padding: 2px 10px; border-radius: 12px; letter-spacing: 0.5px;">
+            BUYOUT EXCLUSIVO
+          </div>
+          <span style="font-size: 0.8rem; font-weight: 700; color: #f59e0b; text-transform: uppercase;">Propiedad Intelectual 100%</span>
+          <div style="font-size: 1.55rem; font-weight: 800; color: #fff; margin: 8px 0 2px 0;">
+            Valoración: $22.000 <span style="font-size: 0.95rem; color: var(--text-muted); font-weight: 500;">USD</span>
+          </div>
+          <p style="font-size: 0.75rem; color: #f59e0b; margin-bottom: 10px; font-weight: 600;">(Negociación abierta & traspaso completo de código)</p>
+          <ul style="font-size: 0.78rem; color: var(--text-muted); line-height: 1.6; padding-left: 18px; margin-bottom: 16px;">
+            <li><strong style="color: #fff;">Repositorio Git Completo</strong>: React Native (Expo 52) + TypeScript.</li>
+            <li><strong style="color: #fff;">65 tests automáticos (100% OK)</strong>: OpenSSF Gold y OWASP ASVS L2.</li>
+            <li><strong style="color: #fff;">0 Costes de Servidor</strong>: SafeStorage desacoplado Offline-First.</li>
+            <li><strong style="color: #fff;">VDR SHA-256</strong>: Sala de datos virtual sellada con clave privada.</li>
+          </ul>
+        </div>
+
+        <!-- Tarjeta 2: Marca Blanca B2B -->
+        <div style="background: linear-gradient(145deg, rgba(56, 189, 248, 0.08) 0%, rgba(15, 23, 42, 0.9) 100%); border: 1px solid rgba(56, 189, 248, 0.35); border-radius: var(--radius-lg); padding: 20px; position: relative;">
+          <div style="position: absolute; top: -11px; right: 14px; background: #38bdf8; color: #000; font-size: 0.7rem; font-weight: 800; padding: 2px 10px; border-radius: 12px; letter-spacing: 0.5px;">
+            MARCA BLANCA
+          </div>
+          <span style="font-size: 0.8rem; font-weight: 700; color: #38bdf8; text-transform: uppercase;">Gimnasios & Wellness B2B</span>
+          <div style="font-size: 1.55rem; font-weight: 800; color: #fff; margin: 8px 0 2px 0;">
+            Desde $4.500 <span style="font-size: 0.95rem; color: var(--text-muted); font-weight: 500;">USD</span>
+          </div>
+          <p style="font-size: 0.75rem; color: #38bdf8; margin-bottom: 10px; font-weight: 600;">(Licencia única o anual por cadena de fitness)</p>
+          <ul style="font-size: 0.78rem; color: var(--text-muted); line-height: 1.6; padding-left: 18px; margin-bottom: 16px;">
+            <li><strong style="color: #fff;">Modo Gimnasio White-Label</strong>: Logo y colores del centro deportivo.</li>
+            <li><strong style="color: #fff;">Multi-Plataforma</strong>: Android APK compilado + PWA Web.</li>
+            <li><strong style="color: #fff;">Soporte del Autor</strong>: 30 días de asistencia técnica en despliegue.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 10px;">
+        <a href="mailto:maurouribe602@gmail.com?subject=Propuesta%20de%20Adquisici%C3%B3n%20%2F%20Licencia%20Ataraxia&body=Hola%20Mauricio%2C%20he%20revisado%20Ataraxia%20en%20la%20vitrina%20y%20nos%20gustar%C3%ADa%20conversar%20sobre..." onclick="copiarAlPortapapeles('maurouribe602@gmail.com', this)" class="btn btn-primary btn-block" style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); border-color: #f59e0b; color: #000; font-size: 1.05rem; padding: 14px 20px; display: flex; align-items: center; justify-content: center; gap: 10px; font-weight: 800;">
+          <span>✉️</span> Enviar Oferta / Propuesta por Email (maurouribe602@gmail.com)
+        </a>
+      </div>
+
+      <div class="modal-footer" style="margin-top: 18px; border-top: 1px solid var(--border-subtle); padding-top: 12px;">
+        <p style="font-size: 0.78rem; color: var(--text-muted); margin: 0;">
+          🔒 Negociación confidencial directa con el autor y propietario exclusivo del código: <strong>Mauricio Jordan Uribe Maldonado</strong>. Acepta custodia Escrow.com o transferencia internacional.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL DE ADQUISICIÓN / VENTA DE CÓDIGO (FARO) -->
+  <div class="modal-backdrop" id="modal-venta-faro" style="display: none;">
+    <div class="modal-card" style="max-width: 680px; max-height: 90vh; overflow-y: auto;">
+      <button class="modal-close" onclick="cerrarModalVentaFaro()" aria-label="Cerrar modal de adquisición">✕</button>
+      
+      <div class="modal-header">
+        <span class="modal-kicker" style="color: #f59e0b;">💼 OPORTUNIDAD DE INVERSIÓN & ACTIVO SAFETYTECH INSTITUCIONAL</span>
+        <h3 class="modal-title" style="display: flex; align-items: center; gap: 10px; margin-top: 6px;">
+          <span>🚨</span> Faro v1.9.0 — Adquisición & Licencia B2B
+        </h3>
+        <p class="modal-sub" style="margin-bottom: 16px;">
+          Sistema de seguridad personal, alerta SOS con geolocalización instantánea a contactos de confianza y baliza estroboscópica. Calificación Institucional AAA (Score 99.4/100), 25/25 tests y OpenSSF Gold.
+        </p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; margin-bottom: 22px;">
+        <!-- Tarjeta 1: Buyout -->
+        <div style="background: linear-gradient(145deg, rgba(245, 158, 11, 0.08) 0%, rgba(15, 23, 42, 0.9) 100%); border: 2px solid rgba(245, 158, 11, 0.4); border-radius: var(--radius-lg); padding: 20px; position: relative;">
+          <div style="position: absolute; top: -11px; right: 14px; background: #f59e0b; color: #000; font-size: 0.7rem; font-weight: 800; padding: 2px 10px; border-radius: 12px; letter-spacing: 0.5px;">
+            BUYOUT EXCLUSIVO
+          </div>
+          <span style="font-size: 0.8rem; font-weight: 700; color: #f59e0b; text-transform: uppercase;">Propiedad Intelectual 100%</span>
+          <div style="font-size: 1.55rem; font-weight: 800; color: #fff; margin: 8px 0 2px 0;">
+            Valoración: $15.000 <span style="font-size: 0.95rem; color: var(--text-muted); font-weight: 500;">USD</span>
+          </div>
+          <p style="font-size: 0.75rem; color: #f59e0b; margin-bottom: 10px; font-weight: 600;">(Negociación abierta & traspaso completo de código)</p>
+          <ul style="font-size: 0.78rem; color: var(--text-muted); line-height: 1.6; padding-left: 18px; margin-bottom: 16px;">
+            <li><strong style="color: #fff;">Repositorio Git Completo</strong>: Arquitectura PWA Offline-First ultra ligera.</li>
+            <li><strong style="color: #fff;">25 tests automáticos (100% OK)</strong>: OpenSSF Gold y OWASP ASVS L2.</li>
+            <li><strong style="color: #fff;">Cero servidores</strong>: Despliegue estático sin costes mensuales.</li>
+            <li><strong style="color: #fff;">VDR SHA-256</strong>: Paquete sellado listo para auditoría M&A.</li>
+          </ul>
+        </div>
+
+        <!-- Tarjeta 2: Marca Blanca B2B -->
+        <div style="background: linear-gradient(145deg, rgba(56, 189, 248, 0.08) 0%, rgba(15, 23, 42, 0.9) 100%); border: 1px solid rgba(56, 189, 248, 0.35); border-radius: var(--radius-lg); padding: 20px; position: relative;">
+          <div style="position: absolute; top: -11px; right: 14px; background: #38bdf8; color: #000; font-size: 0.7rem; font-weight: 800; padding: 2px 10px; border-radius: 12px; letter-spacing: 0.5px;">
+            MARCA BLANCA
+          </div>
+          <span style="font-size: 0.8rem; font-weight: 700; color: #38bdf8; text-transform: uppercase;">Seguridad Institucional B2B</span>
+          <div style="font-size: 1.55rem; font-weight: 800; color: #fff; margin: 8px 0 2px 0;">
+            Desde $3.000 <span style="font-size: 0.95rem; color: var(--text-muted); font-weight: 500;">USD</span>
+          </div>
+          <p style="font-size: 0.75rem; color: #38bdf8; margin-bottom: 10px; font-weight: 600;">(Licencia para universidades, municipalidades o empresas de seguridad)</p>
+          <ul style="font-size: 0.78rem; color: var(--text-muted); line-height: 1.6; padding-left: 18px; margin-bottom: 16px;">
+            <li><strong style="color: #fff;">Marca Institucional</strong>: Personalización de logotipo, geocercas y remitentes.</li>
+            <li><strong style="color: #fff;">Despliegue Inmediato</strong>: Instalación en dominios propios en < 5 días.</li>
+            <li><strong style="color: #fff;">Soporte del Autor</strong>: 30 días de acompañamiento técnico.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 10px;">
+        <a href="mailto:maurouribe602@gmail.com?subject=Propuesta%20de%20Adquisici%C3%B3n%20%2F%20Licencia%20Faro&body=Hola%20Mauricio%2C%20he%20revisado%20Faro%20en%20la%20vitrina%20y%20nos%20gustar%C3%ADa%20conversar%20sobre..." onclick="copiarAlPortapapeles('maurouribe602@gmail.com', this)" class="btn btn-primary btn-block" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%); border-color: #10b981; color: #fff; font-size: 1.05rem; padding: 14px 20px; display: flex; align-items: center; justify-content: center; gap: 10px; font-weight: 800;">
+          <span>✉️</span> Enviar Oferta / Propuesta por Email (maurouribe602@gmail.com)
+        </a>
+      </div>
+
+      <div class="modal-footer" style="margin-top: 18px; border-top: 1px solid var(--border-subtle); padding-top: 12px;">
+        <p style="font-size: 0.78rem; color: var(--text-muted); margin: 0;">
+          🔒 Negociación confidencial directa con el autor y propietario exclusivo del código: <strong>Mauricio Jordan Uribe Maldonado</strong>. Acepta custodia Escrow.com o transferencia internacional.
+        </p>
+      </div>
     </div>
   </div>
 

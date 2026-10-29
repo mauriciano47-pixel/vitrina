@@ -109,6 +109,63 @@ function cerrarModalDonacion() {
 /**
  * Modal de Venta y Licenciamiento B2B de HiDoctor ($18k USD)
  */
+
+/**
+ * Modal de Venta y Licenciamiento B2B de Ataraxia ($22k USD)
+ */
+function abrirModalVentaAtaraxia() {
+  try {
+    const modal = document.getElementById('modal-venta-ataraxia');
+    if (modal) {
+      modal.style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+    } else {
+      mostrarToast('⚠️ Módulo de adquisición en actualización.');
+    }
+  } catch (err) {
+    console.error('[Venta Ataraxia] Error:', err);
+    mostrarToast('⚠️ No se pudo abrir la ficha de adquisición B2B.');
+  }
+}
+
+function cerrarModalVentaAtaraxia() {
+  try {
+    const modal = document.getElementById('modal-venta-ataraxia');
+    if (modal) modal.style.display = 'none';
+    document.body.style.overflow = 'auto';
+  } catch (e) {
+    console.warn('[Venta Ataraxia] Error al cerrar modal:', e);
+  }
+}
+
+/**
+ * Modal de Venta y Licenciamiento B2B de Faro ($15k USD)
+ */
+function abrirModalVentaFaro() {
+  try {
+    const modal = document.getElementById('modal-venta-faro');
+    if (modal) {
+      modal.style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+    } else {
+      mostrarToast('⚠️ Módulo de adquisición en actualización.');
+    }
+  } catch (err) {
+    console.error('[Venta Faro] Error:', err);
+    mostrarToast('⚠️ No se pudo abrir la ficha de adquisición B2B.');
+  }
+}
+
+function cerrarModalVentaFaro() {
+  try {
+    const modal = document.getElementById('modal-venta-faro');
+    if (modal) modal.style.display = 'none';
+    document.body.style.overflow = 'auto';
+  } catch (e) {
+    console.warn('[Venta Faro] Error al cerrar modal:', e);
+  }
+}
+
 function abrirModalVentaHiDoctor() {
   try {
     const modal = document.getElementById('modal-venta-hidoctor');
