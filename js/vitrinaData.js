@@ -130,7 +130,7 @@ export const AUDITORIA_DATA = {
   hidoctor: {
     title: 'HiDoctor (HiDoc)',
     category: 'Bitácora Clínica Pediátrica Inteligente con Triaje por IA',
-    version: 'v2.3.0 • B2B Marca Blanca & PWA',
+    version: 'v3.1.0 • SaaS Edition & B2B Marca Blanca',
     sonarUrl: 'https://sonarcloud.io/summary/overall?id=mauriciano47-pixel_hi-doctor',
     sonarBadgeUrl: 'https://sonarcloud.io/api/project_badges/measure?project=mauriciano47-pixel_hi-doctor&metric=alert_status',
     kpis: [
@@ -151,7 +151,7 @@ export const AUDITORIA_DATA = {
   ataraxia: {
     title: 'Ataraxia — Coach Estoico',
     category: 'Fitness, Nutrición & Rendimiento Estoico (Android Nativo EAS)',
-    version: 'v1.2.3 • 60 FPS Ultra Fluid',
+    version: 'v3.0.0 • SaaS Edition & 60 FPS Ultra Fluid',
     sonarUrl: 'https://sonarcloud.io/summary/overall?id=mauriciano47-pixel_ataraxia',
     sonarBadgeUrl: 'https://sonarcloud.io/api/project_badges/measure?project=mauriciano47-pixel_ataraxia&metric=alert_status',
     kpis: [
